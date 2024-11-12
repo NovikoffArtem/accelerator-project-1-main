@@ -1,0 +1,12 @@
+.page-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  color: $base-text-color;
+  margin: 0 auto;
+}

@@ -1,0 +1,132 @@
+.hero {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+    padding-inline: 72px;
+    gap: 56px;
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+}
+
+.hero__text {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 21px;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 26px;
+    padding-block: 32px;
+
+    @media (min-width: $desktop-width) {
+      padding-block: 52px;
+      column-gap: 0;
+      padding-left: 75px;
+    }
+  }
+}
+
+.hero__description {
+  line-height: 20px;
+  font-weight: 400;
+  align-self: flex-end;
+  text-align: right;
+  margin-bottom: 47px;
+  min-width: 113px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 22px;
+    margin: 0;
+    padding-top: 60px;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 115px;
+    padding-top: 70px;
+  }
+}
+
+.hero__column {
+  font-family: $second-font;
+  text-align: right;
+  margin-bottom: 47px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 36px;
+    width: 270px;
+  }
+}
+
+.hero__name {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 14px;
+  padding-right: 2px;
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 52px;
+    line-height: 52px;
+    margin-bottom: 43px;
+  }
+}
+
+.hero__title {
+  font-size: 62px;
+  line-height: 62px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin: 0;
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 72px;
+    line-height: 85px;
+    letter-spacing: 0.03em;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 92px;
+    line-height: 110px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.hero__button {
+  grid-column: 1/-1;
+
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+    margin-top: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-self: end;
+  }
+}
+
+.hero__image {
+  @media (width <= 767px) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}

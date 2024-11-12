@@ -10,22 +10,22 @@
 </head>
 
 <body class="page-body">
-  <header class="header">
+  <header class="header" data-test="hero">
     <div class="header__wrapper">
       <div class="header__top-wrapper">
         <img class="header__logo logo" src="img/images/logo/logo.svg" width="100" height="20" alt="Логотип">
-        <a href="tel:88005555555">8 800 555 55 55</a>
+        <a class="header__link" href="tel:88005555555">8 800 555-55-55</a>
       </div>
-      <section class="hero" data-test="hero">
+      <section class="hero">
         <div class="hero__text">
           <p class="hero__description">
-            Тренажёрный зал Групповые занятия Кардио-зона
+            Тренажёрный зал Групповые занятия<br> Кардио-зона
           </p>
           <div class="hero__column">
             <p class="hero__name">Омск</p>
             <h1 class="hero__title">Фитнес центр</h1>
           </div>
-          <a class="hero__button primary-button button" href="#price-block">Купить абонемент</a>
+          <a class="hero__button button--primary button" href="#price-block">Купить абонемент</a>
         </div>
         <picture>
           <source media="(min-width: 1366px)" type="image/webp" srcset="img/images/hero/hero-desktop@1x.webp 1x, img/images/hero/hero-desktop@2x.webp 2x" width="500" height="524">
@@ -37,7 +37,7 @@
       </section>
     </div>
   </header>
-  <main>
+  <main class="main">
     <section class="about" data-test="about">
       <div class="about__text-wrapper">
         <h2 class="about__title section-title">Тренажёрный зал</h2>

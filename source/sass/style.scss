@@ -3,28 +3,14 @@
 @import "./common/variables";
 @import "./common/fonts";
 @import "./common/global";
+@import "./common/visually-hidden";
+@import "./common/button";
+@import "./blocks/page-body";
+@import "./blocks/main";
+@import "./blocks/header";
+@import "./blocks/logo";
+@import "./blocks/hero";
 
-// @import "./common/visually-hidden";
-
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: aquamarine;
-  min-width: 320px;
-  padding: 10px;
-}
-
-
-.hero-section__image {
-  @media (width <= 767px) {
-    display: none;
-  }
-}
 
 .games__date-text {
   width: 50px;
