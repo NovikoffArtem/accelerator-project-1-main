@@ -2,10 +2,10 @@
   @media (min-width: $tablet-width) {
     display: flex;
     gap: 28px;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: space-between;
     padding-inline: 72px;
     gap: 56px;
     max-width: 1366px;
@@ -108,7 +108,6 @@
 
 .hero__button {
   grid-column: 1/-1;
-
   width: 100%;
 
   @media (min-width: $tablet-width) {

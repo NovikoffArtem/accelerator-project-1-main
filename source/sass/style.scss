@@ -10,6 +10,9 @@
 @import "./blocks/header";
 @import "./blocks/logo";
 @import "./blocks/hero";
+@import "./blocks/about";
+@import "./blocks/section-title";
+@import "./blocks/video";
 
 
 .games__date-text {
@@ -88,7 +91,6 @@ ul {
 .card:hover .card__subtitle {
   display: block;
   z-index: 1;
-
   position: relative;
 }
 

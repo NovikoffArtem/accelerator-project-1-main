@@ -39,22 +39,27 @@
   </header>
   <main class="main">
     <section class="about" data-test="about">
-      <div class="about__text-wrapper">
-        <h2 class="about__title section-title">Тренажёрный зал</h2>
-        <h3 class="about__subtitle">Просторный зал площадью 900 кв/м</h3>
-        <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+      <div class="about__wrapper">
+        <div class="about__text-wrapper">
+          <h2 class="about__title section-title">Тренажёрный зал</h2>
+          <h3 class="about__subtitle">Просторный зал площадью 900 кв/м</h3>
+          <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+          <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
+          </p>
+        </div>
+        <picture>
+          <source media="(min-width: 1366px)" type="image/webp" srcset="img/images/jym/jym-desktop@1x.webp 1x, img/images/jym/jym-desktop@2x.webp 2x" width="660" height="400">
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/images/jym/jym-tablet@1x.webp 1x, img/images/jym/jym-tablet@2x.webp 2x" width="678" height="345">
+          <source type="image/webp" srcset="img/images/jym/jym-mobile@1x.webp 1x, img/images/jym/jym-mobile@2x.webp 2x" width="320" height="280">
+          <source media="(min-width: 1366px)" type="image/jpg" srcset="img/images/jym/jym-desktop@1x.jpg 1x, img/images/jym/jym-desktop@2x.jpg 2x" width="660" height="400">
+          <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/jym/jym-tablet@1x.jpg 1x, img/images/jym/jym-tablet@2x.jpg 2x" width="678" height="345">
+          <img class="about__image" src="img/images/jym/jym-mobile@1x.jpg" srcset="img/images/jym/jym-mobile@2x.jpg 2x" width="320" height="280" alt="Тренажерный зал">
+        </picture>
       </div>
-      <picture>
-        <source media="(min-width: 1366px)" type="image/webp" srcset="img/images/jym/jym-desktop@1x.webp 1x, img/images/jym/jym-desktop@2x.webp 2x" width="660" height="400">
-        <source media="(min-width: 768px)" type="image/webp" srcset="img/images/jym/jym-tablet@1x.webp 1x, img/images/jym/jym-tablet@2x.webp 2x" width="678" height="345">
-        <source type="image/webp" srcset="img/images/jym/jym-mobile@1x.webp 1x, img/images/jym/jym-mobile@2x.webp 2x" width="320" height="280">
-        <source media="(min-width: 1366px)" type="image/jpg" srcset="img/images/jym/jym-desktop@1x.jpg 1x, img/images/jym/jym-desktop@2x.jpg 2x" width="660" height="400">
-        <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/jym/jym-tablet@1x.jpg 1x, img/images/jym/jym-tablet@2x.jpg 2x" width="678" height="345">
-        <img class="about__image" src="img/images/jym/jym-mobile@1x.jpg" srcset="img/images/jym/jym-mobile@2x.jpg 2x" width="320" height="280" alt="Тренажерный зал">
-      </picture>
-      <div class="about__video video">
-        <div class="video__preview"></div>
-        <button class="video__button" type="button"><span class="visually-hidden">Запустить видео</span></button>
+      <div class="video">
+        <div class="video__preview">
+          <button class="video__button" type="button"><span class="visually-hidden">Запустить видео</span></button>
+        </div>
       </div>
     </section>
     <section class="price" data-test="price" id="price-block">
