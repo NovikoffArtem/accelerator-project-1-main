@@ -14,7 +14,9 @@ const changeTab = (evt) => {
 
     const current = evt.target.closest('button');
     currentCount.classList.remove('price__tab-button--active');
+    currentCount.setAttribute('aria-selected', 'false');
     current.classList.add('price__tab-button--active');
+    current.setAttribute('aria-selected', 'true');
     currentCount = current;
 
     const countOfMonths = Number(current.dataset.count);
