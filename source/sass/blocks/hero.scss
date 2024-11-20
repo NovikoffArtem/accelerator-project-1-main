@@ -113,10 +113,18 @@
   @media (min-width: $tablet-width) {
     grid-column: 2/3;
     margin-top: 3px;
+    height: 56px;
+
+    min-width: 185px;
+    padding-inline: 10px;
+    padding-top: 21px;
   }
 
   @media (min-width: $desktop-width) {
     justify-self: end;
+    height: 66px;
+    width: 270px;
+    padding-top: 27px;
   }
 }
 

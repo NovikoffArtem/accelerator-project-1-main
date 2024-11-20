@@ -13,30 +13,15 @@
 @import "./blocks/about";
 @import "./blocks/section-title";
 @import "./blocks/video";
+@import "./blocks/price";
+@import "./blocks/price-card";
+@import "./blocks/games";
 
-
-.games__date-text {
-  width: 50px;
-  position: relative;
-  padding-left: 20px;
-}
-
-.games__date-count {
-  position: absolute;
-  font-size: 30px;
-  left: 0;
-}
 
 .swiper__item-content {
   width: 260px;
   height: 300px;
   color: #ffffff;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 

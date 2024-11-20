@@ -67,83 +67,82 @@
         <h2 class="price__title section-title">Абонементы</h2>
         <div class="price__tab">
           <div class="price__tablist" role="tablist" aria-label="Выбор абонеммента">
-            <button class="price__tab-button" type="button" role="tab" aria-selected="true" id="month">
-              1 месяц
+            <button class="price__tab-button price__tab-button--active button" type="button" role="tab" aria-selected="true" id="month" data-count="1">
+              <span>1 месяц</span>
             </button>
-            <button class="price__tab-button" type="button" role="tab" aria-selected="false" id="half-year">
-              6 месяцев
+            <button class="price__tab-button button" type="button" role="tab" aria-selected="false" id="half-year" data-count="6">
+              <span>6 месяцев</span>
             </button>
-            <button class="price__tab-button" type="button" role="tab" aria-selected="false" id="year">
-              12 месяцев
+            <button class="price__tab-button button" type="button" role="tab" aria-selected="false" id="year" data-count="12">
+              <span>12 месяцев</span>
             </button>
           </div>
-          <div class="price__tabpanel" role="tabpanel" aria-labelledby="month">
-            <ul class="price__list">
-              <li class="price__item">
-                <h3 class="price__item-title">С тренером</h3>
-                <p class="price__item-description">12 занятий</p>
-                <span class="price__item-count">5000</span>
-                <a class="price__item-button button--primary button" href="#">Купить абонемент</a>
-              </li>
-              <li class="price__item">
-                <h3 class="price__item-title">Дневной</h3>
-                <p class="price__item-description">с 8:00 до 17:00</p>
-                <span class="price__item-count">1700</span>
-                <a class="price__item-button button--primary button" href="#">Купить абонемент</a>
-              </li>
-              <li class="price__item">
-                <h3 class="price__item-title">Полный день</h3>
-                <p class="price__item-description">с 8:00 до 22:00</p>
-                <span class="price__item-count">2700</span>
-                <a class="price__item-button button--primary button" href="#">Купить абонемент</a>
-              </li>
-            </ul>
-          </div>
-          <div class="price__tabpanel" role="tabpanel" aria-labelledby="half-year" hidden>
-            <ul class="price__list">
-              <li class="price__item">
-                <h3 class="price__item-title">С тренером</h3>
-                <p class="price__item-description">12 занятий</p>
-                <span class="price__item-count">30000</span>
-                <a class="price__item-button button--primary button" href="#">Купить абонемент</a>
-              </li>
-              <li class="price__item">
-                <h3 class="price__item-title">Дневной</h3>
-                <p class="price__item-description">с 8:00 до 17:00</p>
-                <span class="price__item-count">10200</span>
-                <a class="price__item-button button--primary button" href="#">Купить абонемент</a>
-              </li>
-              <li class="price__item">
-                <h3 class="price__item-title">Полный день</h3>
-                <p class="price__item-description">с 8:00 до 22:00</p>
-                <span class="price__item-count">16200</span>
-                <a class="price__item-button button--primary button" href="#">Купить абонемент</a>
-              </li>
-            </ul>
-          </div>
-          <div class="price__tabpanel" role="tabpanel" aria-labelledby="half-year" hidden>
-            <ul class="price__list">
-              <li class="price__item">
-                <h3 class="price__item-title">С тренером</h3>
-                <p class="price__item-description">12 занятий</p>
-                <span class="price__item-count">60000</span>
-                <a class="price__item-button button--primary button" href="#">Купить абонемент</a>
-              </li>
-              <li class=" price__item">
-                <h3 class="price__item-title">Дневной</h3>
-                <p class="price__item-description">с 8:00 до 17:00</p>
-                <span class="price__item-count">20400</span>
-                <a class="price__item-button button--primary button" href="#">Купить абонемент</a>
-              </li>
-              <li class="price__item">
-                <h3 class="price__item-title">Полный день</h3>
-                <p class="price__item-description">с 8:00 до 22:00</p>
-                <span class="price__item-count">32400</span>
-                <a class="price__item-button button--primary button" href="#">Купить абонемент</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="price__list" role="tabpanel" aria-labelledby="month">
+            <li class="price__item price-card">
+              <h3 class="price-card__title">С тренером</h3>
+              <p class="price-card__description">12 занятий</p>
+              <span class="price-card__count" data-price="5000" data-count="5000">5000</span>
+              <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
+            </li>
+            <li class="price__item price-card">
+              <h3 class="price-card__title">Дневной</h3>
+              <p class="price-card__description">с 8:00 до 17:00</p>
+              <span class="price-card__count" data-price="1700" data-count="1700">1700</span>
+              <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
+            </li>
+            <li class="price__item price-card">
+              <h3 class="price-card__title">Полный день</h3>
+              <p class="price-card__description">с 8:00 до 22:00</p>
+              <span class="price-card__count" data-price="2700" data-count="2700">2700</span>
+              <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
+            </li>
+          </ul>
         </div>
+        <!-- <div class="price__tabpanel" role="tabpanel" aria-labelledby="half-year" hidden>
+            <ul class="price__list">
+              <li class="price__item price-card">
+                <h3 class="price-card__title">С тренером</h3>
+                <p class="price-card__description">12 занятий</p>
+                <span class="price-card__count">30000</span>
+                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
+              </li>
+              <li class="price__item price-card">
+                <h3 class="price-card__title">Дневной</h3>
+                <p class="price-card__description">с 8:00 до 17:00</p>
+                <span class="price-card__count">10200</span>
+                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
+              </li>
+              <li class="price__item price-card">
+                <h3 class="price-card__title">Полный день</h3>
+                <p class="price-card__description">с 8:00 до 22:00</p>
+                <span class="price-card__count">16200</span>
+                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
+              </li>
+            </ul>
+          </div>
+          <div class="price__tabpanel" role="tabpanel" aria-labelledby="half-year" hidden>
+            <ul class="price__list">
+              <li class="price__item price-card">
+                <h3 class="price-card__title">С тренером</h3>
+                <p class="price-card__description">12 занятий</p>
+                <span class="price-card__count">60000</span>
+                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
+              </li>
+              <li class="price__item price-card">
+                <h3 class="price-card__title">Дневной</h3>
+                <p class="price-card__description">с 8:00 до 17:00</p>
+                <span class="price-card__count">20400</span>
+                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
+              </li>
+              <li class="price__item price-card">
+                <h3 class="price-card__title">Полный день</h3>
+                <p class="price-card__description">с 8:00 до 22:00</p>
+                <span class="price-card__count">16200</span>
+                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
+              </li>
+            </ul>
+          </div> -->
+      </div>
       </div>
     </section>
     <section class="games" data-test="games">
@@ -161,14 +160,14 @@
               <p class="games__time">12:00</p>
             </div>
           </div>
-          <a class="games__button button--secondary button" href="#">Запалнить заявку</a>
+          <a class="games__button button--primary button" href="#">Заполнить заявку</a>
         </div>
         <picture>
-          <source media="(min-width: 1366px)" type="image/webp" srcset="img/images/games/games-bg-desktop@1x.webp 1x, img/images/games/games-bg-desktop@2x.webp 2x" width="660" height="500">
-          <source media="(min-width: 768px)" type="image/webp" srcset="img/images/games/games-bg-tablet@1x.webp 1x, img/images/games/games-bg-tablet@2x.webp 2x" width="378" height="348">
+          <source media="(min-width: 1100px)" type="image/webp" srcset="img/images/games/games-bg-desktop@1x.webp 1x, img/images/games/games-bg-desktop@2x.webp 2x" width="660" height="500">
+          <source media="(min-width: 500px)" type="image/webp" srcset="img/images/games/games-bg-tablet@1x.webp 1x, img/images/games/games-bg-tablet@2x.webp 2x" width="378" height="348">
           <source type="image/webp" srcset="img/images/games/games-bg-mobile@1x.webp 1x, img/images/games/games-bg-mobile@2x.webp 2x" width="290" height="290">
-          <source media="(min-width: 1366px)" type="image/jpg" srcset="img/images/games/games-bg-desktop@1x.jpg 1x, img/images/games/games-bg-desktop@2x.jpg 2x" width="660" height="500">
-          <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/games/games-bg-tablet@1x.jpg 1x, img/images/games/games-bg-tablet@2x.jpg 2x" width="378" height="348">
+          <source media="(min-width: 1100px)" type="image/jpg" srcset="img/images/games/games-bg-desktop@1x.jpg 1x, img/images/games/games-bg-desktop@2x.jpg 2x" width="660" height="500">
+          <source media="(min-width: 500px)" type="image/jpg" srcset="img/images/games/games-bg-tablet@1x.jpg 1x, img/images/games/games-bg-tablet@2x.jpg 2x" width="378" height="348">
           <img class="games__image" src="img/images/jym/jym-mobile@1x.jpg" srcset="img/images/games/games-bg-mobile@2x.jpg 2x" width="290" height="290" alt="Мужчина занимается спортом">
         </picture>
       </div>

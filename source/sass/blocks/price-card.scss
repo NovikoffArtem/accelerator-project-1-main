@@ -1,0 +1,110 @@
+.price-card {
+  padding: 50px 42px;
+  background-color: $base-text-color-light;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 380px;
+
+  @media (min-width: $tablet-width) {
+    padding: 65px;
+    gap: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 360px;
+    gap: 17px;
+  }
+}
+
+.price-card__title {
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+  }
+}
+
+.price-card__description {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.price-card__count {
+  font-size: 48px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: $secondary-text-color;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  padding-top: 47px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    height: 150px;
+    padding-top: 60px;
+    gap: 14px;
+  }
+
+  &::before {
+    content: attr(data-price);
+    font-size: 80px;
+    line-height: 1.5;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    color: $price-shadow;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      font-size: 100px;
+    }
+  }
+
+
+  &::after {
+    content: "";
+    background-image: url("../../__spritemap#sprite-ruble-view");
+    width: 24px;
+    height: 33px;
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 42px;
+    }
+  }
+}
+
+.price-card__button {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  color: $base-text-color;
+  border: 2px solid $base-text-color;
+  width: 100%;
+  padding: 25px 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px;
+    height: auto;
+  }
+}

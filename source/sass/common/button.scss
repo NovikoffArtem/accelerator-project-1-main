@@ -8,23 +8,11 @@
   padding: 22px;
   text-transform: uppercase;
   text-decoration: none;
-  width: 290px;
+
   margin: 0;
 }
 
 .button--primary {
   border: 2px solid $base-text-color-light;
   color: $base-text-color-light;
-
-  @media (min-width: $tablet-width) {
-    height: 56px;
-    width: 185px;
-    padding-top: 21px;
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 66px;
-    width: 270px;
-    padding-top: 27px;
-  }
 }
