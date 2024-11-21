@@ -9,4 +9,9 @@
   font-weight: 300;
   color: $base-text-color;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

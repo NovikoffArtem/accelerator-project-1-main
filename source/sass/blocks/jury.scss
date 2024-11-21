@@ -1,0 +1,58 @@
+.jury {
+  padding: 41px 30px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 45px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 103px;
+  }
+}
+
+.jury__swiper {
+  width: 260px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
+
+  @media (width >= 950px) {
+    width: 860px;
+  }
+
+  @media (width >= 1200px) {
+    width: 1160px;
+  }
+}
+
+.jury__title {
+  margin: 0 0 19px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    line-height: 1;
+    margin-bottom: 46px;
+    text-align: center;
+  }
+}
+
+.jury__list {
+  display: flex;
+  margin: 0 auto;
+  gap: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
+
+  @media (width >= 950px) {
+    width: 860px;
+  }
+
+  @media (width >= 1200px) {
+    width: 1160px;
+  }
+}

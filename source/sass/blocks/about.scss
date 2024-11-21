@@ -37,13 +37,16 @@
 
 .about__title {
   margin-bottom: 11px;
+  text-align: left;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 19px;
+    text-align: center;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 26px;
+    text-align-last: left;
   }
 }
 

@@ -1,7 +1,24 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
+// import '../js/vendror/swiper.js';
+import Swiper from 'swiper';
+import {Navigation, Pagination} from 'swiper/modules';
+
+new Swiper('.swiper', {
+  // Optional parameters
+  // direction: 'vertical',
+  loop: true,
+  // slidesPerView: 4,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  modules: [Navigation, Pagination],
+});
 
 
 const tabButtonsArr = Array.from(document.querySelectorAll('.price__tab-button'));
