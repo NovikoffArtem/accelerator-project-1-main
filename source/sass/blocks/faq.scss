@@ -1,0 +1,307 @@
+.faq {
+  background-color: $bg-primary;
+}
+
+.faq__wrapper {
+  padding: 70px 15px;
+
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 103px;
+    width: 1366px;
+    margin: 0 auto;
+  }
+}
+
+.faq__title {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 50px;
+  }
+}
+
+.faq__tab {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.faq__tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-self: center;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.faq__tab-button {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: none;
+  background-color: inherit;
+  color: $base-text-color;
+  min-width: 140px;
+  padding: 14px 22px;
+  border: 1px solid $faq-tab-button-border;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    min-width: 162px;
+    padding-block: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 260px;
+    padding-block: 17px;
+  }
+}
+
+.faq__tab-button--current {
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: $base-text-color-light;
+  padding: 15px 22px;
+  border: none;
+
+  @media (min-width: $desktop-width) {
+    padding-block: 18px;
+  }
+}
+
+.faq__tabpanel-list {
+  @include list-reset;
+}
+
+.faq__tabpanel-list li {
+  border-top: 1px solid $faq-divider;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__tabpanel-list li:first-child span {
+  @media (min-width: $tablet-width) {
+    margin-top: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+  }
+}
+
+.faq__tabpanel-list li:last-child {
+  border-bottom: 1px solid $faq-divider;
+}
+
+.faq__tabpanel-list span {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+  display: block;
+  width: 74%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    width: 80%;
+    margin-bottom: 28px;
+  }
+}
+
+.faq__tabpanel-list p {
+  font-size: 16px;
+  line-height: 20px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 300ms;
+  width: 238px;
+  margin: 0;
+  order: 2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    width: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 660px;
+  }
+}
+
+.faq__tabpanel-list .faq__tab-text--open {
+  opacity: 1;
+  margin: 0;
+  max-height: 600px;
+  padding-bottom: 20px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 23px;
+  }
+}
+
+// кнопка +
+.faq__tabpanel-list button {
+  background-color: inherit;
+  border: none;
+  text-align: left;
+  color: inherit;
+  padding: 0;
+  position: relative;
+  order: 1;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    width: 860px;
+  }
+
+
+  &::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    mask-image: url("../../__spritemap#sprite-plus-view");
+    mask-repeat: no-repeat;
+    border-radius: 100%;
+    background-color: $button-border;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 20px;
+      right: 10px;
+      top: 49%;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 51%;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border: 1px solid $button-border;
+    border-radius: 100%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+      right: 0;
+      top: 49%;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 51%;
+    }
+  }
+}
+
+// кнопка -
+.faq__tab-text--open + button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: $button-border;
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 59%;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 49%;
+  }
+}
+
+.faq__tab-text--open + button::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background-color: $base-text-color-light;
+  mask-image: none;
+  position: absolute;
+  display: block;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    top: 59%;
+    right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 49%;
+  }
+}
+
+.faq__tab-text--open + button > span {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.faq__tabpanel-list li:last-child span {
+  @media (min-width: $tablet-width) {
+    margin-top: 25px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 32px;
+    margin-bottom: 30px;
+  }
+}

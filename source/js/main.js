@@ -6,7 +6,8 @@ new Swiper('.swiper', {
   // Optional parameters
   // direction: 'vertical',
   loop: true,
-  // slidesPerView: 4,
+  slidesPerView: 'auto',
+  spaceBetween: 40,
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
@@ -21,7 +22,7 @@ new Swiper('.swiper', {
 });
 
 
-const tabButtonsArr = Array.from(document.querySelectorAll('.price__tab-button'));
+const tabButtonsArr = document.querySelectorAll('.price__tab-button');
 
 let currentCount = document.querySelector('.price__tab-button--active');
 
@@ -47,3 +48,23 @@ const changeTab = (evt) => {
   }
 };
 tabButtonsArr.forEach((e) => e.addEventListener('click', changeTab));
+
+// аккордеон
+const accordList = document.querySelectorAll('.faq__tabpanel-list button');
+
+const changeAccordeon = (e) => {
+  const currentButton = e.currentTarget;
+  const currentAccord = e.currentTarget.previousElementSibling;
+  currentAccord.classList.toggle('faq__tab-text--open');
+
+  if(currentAccord.classList.contains('faq__tab-text--open')) {
+    currentButton.setAttribute('aria-expanded', 'true');
+    currentAccord.setAttribute('aria-hidden', 'true');
+  }else {
+    currentButton.setAttribute('aria-expanded', 'false');
+    currentAccord.setAttribute('aria-hidden', 'false');
+  }
+
+};
+
+accordList.forEach((e) => e.addEventListener('click', changeAccordeon));

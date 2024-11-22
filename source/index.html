@@ -167,7 +167,7 @@
           <source type="image/webp" srcset="img/images/games/games-bg-mobile@1x.webp 1x, img/images/games/games-bg-mobile@2x.webp 2x" width="290" height="290">
           <source media="(min-width: 1366px)" type="image/jpg" srcset="img/images/games/games-bg-desktop@1x.jpg 1x, img/images/games/games-bg-desktop@2x.jpg 2x" width="660" height="500">
           <source media="(min-width: 500px)" type="image/jpg" srcset="img/images/games/games-bg-tablet@1x.jpg 1x, img/images/games/games-bg-tablet@2x.jpg 2x" width="378" height="348">
-          <img class="games__image" src="img/images/jym/jym-mobile@1x.jpg" srcset="img/images/games/games-bg-mobile@2x.jpg 2x" width="290" height="290" alt="Мужчина занимается спортом">
+          <img class="games__image" src="img/images/games/games-bg-mobile" srcset="img/images/games/games-bg-mobile@2x.jpg 2x" width="290" height="290" alt="Мужчина занимается спортом">
         </picture>
       </div>
     </section>
@@ -302,23 +302,37 @@
       </div>
     </section>
     <section class="offers" data-test="offers">
-      <h2 class="offers__title section-title">Акции</h2>
-      <div class="offers__year">
-        <div class="offers__year-text">
-          <h3>Год <span>4999</span></h3>
-          <p>Безлимитный абонемент в тренажёрный зал</p>
-          <a class="offers__link" href="#">подробнее</a>
+      <div class="offers__wrapper">
+        <h2 class="offers__title section-title">Акции</h2>
+        <div class="offers__content-wrapper">
+          <div class="offers__year">
+            <div class="offers__year-text">
+              <h3>Год <span>4999</span></h3>
+              <p>Безлимитный абонемент в тренажёрный зал</p>
+              <a class="offers__link" href="#">подробнее</a>
+            </div>
+            <picture>
+              <source media="(min-width: 1366px)" type="image/webp" srcset="img/images/promo/promo-desktop@1x.webp 1x, img/images/promo/promo-desktop@2x.webp 2x" width="280" height="460">
+              <source media="(min-width: 500px)" type="image/webp" srcset="img/images/promo/promo-tablet@1x.webp 1x, img/images/promo/promo-tablet@2x.webp 2x" width="400" height="462">
+              <source type="image/webp" srcset="img/images/promo/promo-mobile@1x.webp 1x, img/images/promo/promo-mobile@2x.webp 2x" width="320" height="360">
+              <source media="(min-width: 1366px)" type="image/jpg" srcset="img/images/promo/promo-desktop@1x.jpg 1x, img/images/promo/promo-desktop@2x.jpg 2x" width="280" height="460">
+              <source media="(min-width: 500px)" type="image/jpg" srcset="img/images/promo/promo-tablet@1x.jpg 1x, img/images/promo/promo-tablet@2x.jpg 2x" width="400" height="462">
+              <img class="offers__image" src="img/images/promo/promo-mobile@1x.jpg" srcset="img/images/promo/promo-mobile@2x.jpg 2x" width="320" height="360" alt="Мужчина занимается спортом">
+            </picture>
+          </div>
+          <div class="offers__simple-wrapper">
+            <div class="offers__simple">
+              <h3>Месяц бесплатно</h3>
+              <p>Приведи друга, получи абонемент в подарок</p>
+              <a class="offers__link offers__link--dark" href="#">подробнее</a>
+            </div>
+            <div class="offers__simple">
+              <h3>Скидка 20%</h3>
+              <p>Корпоративный фитнес с командой</p>
+              <a class="offers__link offers__link--dark" href="#">подробнее</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="offers__simple">
-        <h3>Месяц бесплатно</h3>
-        <p>Приведи друга, получи абонемент в подарок</p>
-        <a href="#">подробнее</a>
-      </div>
-      <div class="offers__simple">
-        <h3>Скидка 20%</h3>
-        <p>Корпоративный фитнес с командой</p>
-        <a href="#">подробнее</a>
       </div>
     </section>
     <section class="faq" data-test="faq">
@@ -326,85 +340,97 @@
         <h2 class="faq__title section-title">Вопросы и ответы</h2>
         <div class="faq__tab">
           <div class="faq__tablist" role="tablist" aria-label="Выбор категории">
-            <button class="faq__tab-button" type="button" id="center" aria-selected="true" role="tab">Центр</button>
-            <button class="faq__tab-button" type="button" id="ticket" aria-selected="false" role="tab">Абонемент</button>
-            <button class="faq__tab-button" type="button" id="services" aria-selected="false" role="tab">Услуги</button>
-            <button class="faq__tab-button" type="button" id="rules" aria-selected="false" role="tab">Правила</button>
+            <button class="faq__tab-button faq__tab-button--current button" type="button" id="center" aria-selected="true" role="tab">Центр</button>
+            <button class="faq__tab-button button" type="button" id="ticket" aria-selected="false" role="tab">Абонемент</button>
+            <button class="faq__tab-button button" type="button" id="services" aria-selected="false" role="tab">Услуги</button>
+            <button class="faq__tab-button button" type="button" id="rules" aria-selected="false" role="tab">Правила</button>
           </div>
           <div class="faq__tabpanel" role="tabpanel" aria-labelledby="center">
             <ul class="faq__tabpanel-list">
               <li>
-                <button type="button" aria-expanded="false"><span>Как стать членом фитнес-центра?</span></button>
-                <p class="open" aria-hidden="true">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                <p class="faq__tab-text--open" aria-hidden="true">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                <button type="button" aria-expanded="true"><span>Как стать членом фитнес-центра?</span></button>
               </li>
-              <li><button type="button" aria-expanded="false"><span>Где можно посмотреть расписание?</span></button>
+              <li>
                 <p aria-hidden="true">Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                <button type="button" aria-expanded="false"><span>Где можно посмотреть расписание?</span></button>
               </li>
-              <li><button type="button" aria-expanded="false"><span>Есть кулеры в центре? Предоставляются полотенца?</span></button>
+              <li>
                 <p aria-hidden="true">Да, в нашем фитнес-центре установлены кулеры с питьевой водой, и вы можете свободно ими пользоваться во время тренировок. Мы заботимся о вашем комфорте и здоровье, поэтому обеспечение доступа к свежей воде — важная часть нашего сервиса.Что касается полотенец, мы предоставляем их нашим клиентам. В каждом тренировочном зале есть полотенца, которые вы можете использовать во время занятий. Также вы можете принести свое полотенце, если вам так удобнее.</p>
+                <button type="button" aria-expanded="false"><span>Есть кулеры в центре? Предоставляются полотенца?</span></button>
               </li>
-              <li><button type="button" aria-expanded="false"><span>Сколько тренеров работает в клубе и какова их квалификация?</span></button>
+              <li>
                 <p aria-hidden="true">В нашем фитнес-центре работает команда высококвалифицированных тренеров. На данный момент у нас более 20 тренеров, каждый из которых обладает опытом и специальными сертификатами в области фитнеса, личных тренировок, групповых занятий и других направлений.</p>
+                <button type="button" aria-expanded="false"><span>Сколько тренеров работает в клубе и какова их квалификация?</span></button>
               </li>
             </ul>
           </div>
           <div class="faq__tabpanel" role="tabpanel" aria-labelledby="ticket" hidden>
             <ul class="faq__tabpanel-list">
               <li>
-                <button type="button" aria-expanded="false"><span>Занятия с тренером входят в абонемент?</span></button>
                 <p aria-hidden="true">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                <button type="button" aria-expanded="false"><span>Занятия с тренером входят в абонемент?</span></button>
               </li>
-              <li><button type="button" aria-expanded="false"><span>Можно ли заморозить абонемент?</span></button>
+              <li>
                 <p aria-hidden="true">
                   Да, в нашем фитнес-центре вы можете заморозить свой абонемент на определенный срок. Мы понимаем, что бывают различные обстоятельства, когда вы не можете посещать тренировки — будь то поездка, болезни или другие личные ситуации.
                 </p>
+                <button type="button" aria-expanded="false"><span>Можно ли заморозить абонемент?</span></button>
               </li>
-              <li><button type="button" aria-expanded="true"><span>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</span></button>
+              <li>
                 <p aria-hidden="false">Может быть установлен лимит на количество посещений тренажерного зала и/или групповых занятий в неделю или месяц.</p>
+                <button type="button" aria-expanded="true"><span>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</span></button>
               </li>
-              <li><button type="button" aria-expanded="false"><span>Что такое семейный доступ и доступ для друзей?</span></button>
+              <li>
                 <p aria-hidden="true">Вы можете получить со скидкой входные билеты для своих друзей на определенный период времени. Это отличный способ заниматься спортом вместе и делиться позитивной атмосферой!
                 </p>
+                <button type="button" aria-expanded="false"><span>Что такое семейный доступ и доступ для друзей?</span></button>
               </li>
             </ul>
           </div>
           <div class="faq__tabpanel" role="tabpanel" aria-labelledby="services" hidden>
             <ul class="faq__tabpanel-list">
               <li>
-                <button type="button" aria-expanded="false"><span>Предлагает ли клуб услуги по консультированию по вопросам питания?</span></button>
                 <p aria-hidden="true">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+                <button type="button" aria-expanded="false"><span>Предлагает ли клуб услуги по консультированию по вопросам питания?</span></button>
               </li>
-              <li><button type="button" aria-expanded="false"><span>Проводятся ли в клубе какие-либо мероприятия или соревнования?</span></button>
+              <li>
                 <p aria-hidden="true">
                   Да, в нашем фитнес-центре регулярно проводятся различные мероприятия и соревнования! Мы стремимся создавать активное сообщество и мотивировать наших клиентов достигать новых высот.
                 </p>
+                <button type="button" aria-expanded="false"><span>Проводятся ли в клубе какие-либо мероприятия или соревнования?</span></button>
               </li>
-              <li><button type="button" aria-expanded="true"><span>Можно ли приобрести в центре спортивное питание?</span></button>
+              <li>
                 <p aria-hidden="false">Да, в нашем фитнес-центре вы можете приобрести разнообразное спортивное питание! Мы предлагаем широкий ассортимент товаров, включая протеиновые порошки, аминокислоты, энергетические батончики, витамины и минералы, а также другие добавки, которые помогут поддержать ваши тренировки и улучшить результаты.</p>
+                <button type="button" aria-expanded="true"><span>Можно ли приобрести в центре спортивное питание?</span></button>
               </li>
-              <li><button type="button" aria-expanded="false"><span>Есть ли в центре детская комната??</span></button>
+              <li>
                 <p aria-hidden="true">Да, в нашем фитнес-центре есть детская комната! Мы понимаем, как важно для родителей заниматься спортом, зная, что их дети находятся в безопасной и веселой обстановке. Наша детская комната оборудована различными развлекательными и обучающими игрушками, а также игровыми зонками для детей разных возрастов.
                 </p>
+                <button type="button" aria-expanded="false"><span>Есть ли в центре детская комната??</span></button>
               </li>
             </ul>
           </div>
           <div class="faq__tabpanel" role="tabpanel" aria-labelledby="rules" hidden>
             <ul class="faq__tabpanel-list">
               <li>
-                <button type="button" aria-expanded="false"><span>Есть в фитнес-центре дресс-код?</span></button>
                 <p aria-hidden="true">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                <button type="button" aria-expanded="false"><span>Есть в фитнес-центре дресс-код?</span></button>
               </li>
-              <li><button type="button" aria-expanded="false"><span>Можно ли приводить с собой детей на тренировки?</span></button>
+              <li>
                 <p aria-hidden="true">
                   Да. Детская комната работает в определенные часы, и за детьми присматривают наши квалифицированные сотрудники. Вы можете оставить своего ребенка у нас на время тренировки, и быть уверенными, что он проводит время с удовольствием.
                 </p>
+                <button type="button" aria-expanded="false"><span>Можно ли приводить с собой детей на тренировки?</span></button>
               </li>
-              <li><button type="button" aria-expanded="true"><span>Какие дополнительные правила посещения центра?</span></button>
+              <li>
                 <p aria-hidden="false">Курение, употребление алкоголя и использование запрещенных веществ на территории клуба строго запрещены.Если у вас есть вопросы о посещении, не стесняйтесь обращаться к нашим администраторам!</p>
+                <button type="button" aria-expanded="true"><span>Какие дополнительные правила посещения центра?</span></button>
               </li>
-              <li><button type="button" aria-expanded="false"><span>Нужна ли медицинская справка для посещения залов и бассейна?</span></button>
+              <li>
                 <p aria-hidden="true">Для посещения залов и бассейна в нашем фитнес-центре медицинская справка не требуется. Однако, если у вас есть хронические заболевания или вы планируете заниматься интенсивными тренировками, мы рекомендуем проконсультироваться с врачом перед началом занятий. Это поможет обеспечить вашу безопасность и комфорт во время тренировок.
                 </p>
+                <button type="button" aria-expanded="false"><span>Нужна ли медицинская справка для посещения залов и бассейна?</span></button>
               </li>
             </ul>
           </div>

@@ -21,86 +21,9 @@
 @import "./blocks/jury";
 @import "./blocks/card";
 @import "./blocks/features";
+@import "./blocks/offers";
+@import "./blocks/faq";
 
-
-.offers__year {
-  position: relative;
-  z-index: 10;
-  min-height: 631px;
-
-
-  @media (width >= 768px) {
-    width: 678px;
-    min-height: 461px;
-  }
-
-  @media (width >= 1336px) {
-    width: 560px;
-    min-height: 460px;
-  }
-}
-
-.offers__year-text {
-  z-index: 10;
-  position: relative;
-}
-
-.offers__year::after {
-  content: "";
-  position: absolute;
-  min-width: 100%;
-  top: 0;
-  right: 0;
-  min-height: 631px;
-  background-image:
-    linear-gradient(180deg, #ed0233 43%, transparent 43%),
-    image-set(
-      url("../img/images/promo/promo-mobile@1x.webp") type("image/webp") 1x,
-      url("../img/images/promo/promo-mobile@2x.webp") type("image/webp") 2x,
-      url("../img/images/promo/promo-mobile@1x.jpg") type("image/jpg") 1x,
-      url("../img/images/promo/promo-mobile@2x.jpg") type("image/jpg") 2x);
-  background-repeat: no-repeat;
-  background-position: bottom;
-
-  @media (width >= 768px) {
-    min-height: 461px;
-    background-image:
-      linear-gradient(90deg, #ed0233 41%, transparent 41%),
-      image-set(
-        url("../img/images/promo/promo-tablet@1x.webp") type("image/webp") 1x,
-        url("../img/images/promo/promo-tablet@2x.webp") type("image/webp") 2x,
-        url("../img/images/promo/promo-tablet@1x.jpg") type("image/jpg") 1x,
-        url("../img/images/promo/promo-tablet@2x.jpg") type("image/jpg") 2x);
-    background-position: 0, right 0;
-  }
-
-  @media (width >= 1336px) {
-    min-height: 460px;
-    background-image:
-      linear-gradient(90deg, #ed0233 50%, transparent 43%),
-      image-set(
-        url("../img/images/promo/promo-desktop@1x.webp") type("image/webp") 1x,
-        url("../img/images/promo/promo-desktop@2x.webp") type("image/webp") 2x,
-        url("../img/images/promo/promo-desktop@1x.jpg") type("image/jpg") 1x,
-        url("../img/images/promo/promo-desktop@2x.jpg") type("image/jpg") 2x);
-    background-position: 0, right 0;
-  }
-}
-
-.faq__tabpanel p {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  will-change: max-height;
-  transition: all 300ms;
-}
-
-.faq__tabpanel .open {
-  opacity: 1;
-  margin: 0;
-  padding: 20px;
-}
 
 .reviews__slide h3 {
   margin-top: -30px;
