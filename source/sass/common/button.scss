@@ -1,10 +1,7 @@
 .button {
   font-family: $primary-font;
-
   font-size: 12px;
   line-height: 12px;
-
-  // font-weight: 700;
   text-align: center;
   border: none;
   padding: 22px;
@@ -17,4 +14,6 @@
 .button--primary {
   border: 2px solid $base-text-color-light;
   color: $base-text-color-light;
+  background-color: transparent;
 }
+

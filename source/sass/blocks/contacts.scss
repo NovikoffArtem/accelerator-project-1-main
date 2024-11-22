@@ -1,0 +1,96 @@
+.contacts {
+  padding: 37px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 66px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 103px;
+    width: 683px;
+  }
+}
+
+.contacts__tittle {
+  text-align: left;
+  margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 36px;
+  }
+}
+
+
+.contacts__list {
+  @include list-reset;
+
+  display: grid;
+  gap: 28px;
+
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 190px);
+    justify-content: center;
+    gap: 15px 60px;
+    position: relative;
+
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      background-color: $faq-divider;
+      left: 50%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 178px);
+    column-gap: 120px;
+    justify-content: flex-start;
+    width: 477px;
+    grid-auto-flow: row;
+
+    &::after {
+      left: 238px;
+    }
+  }
+}
+
+.contacts__item--schedule {
+  @media (min-width: $tablet-width) {
+    grid-row: 2/3;
+  }
+}
+
+.contacts__item-title {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+}
+
+.contacts__item-description {
+  line-height: 20px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

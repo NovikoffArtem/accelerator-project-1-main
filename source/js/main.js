@@ -16,7 +16,7 @@ const jurySwiper = new Swiper('.swiper', {
 
 const reviewsSwiper = new Swiper('.reviews__swiper', {
   // loop: true,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 1000,
   navigation: {
     nextEl: '.swiper-button--reviews-next',

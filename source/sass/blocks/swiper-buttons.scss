@@ -1,0 +1,97 @@
+.swiper-button {
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 45px;
+    height: 45px;
+    z-index: 100;
+    position: absolute;
+    top: 48%;
+    transform: translateY(50%);
+    background-color: transparent;
+    border: none;
+
+
+    &::after {
+      content: "";
+      mask-image: url("../../__spritemap#sprite-slider-arrow-view");
+      mask-repeat: no-repeat;
+      width: 18px;
+      height: 32px;
+      position: absolute;
+      z-index: 100;
+      inset: 0;
+      margin: auto;
+      background-color: $base-text-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 50%;
+    }
+  }
+}
+
+.swiper-button-prev {
+  left: 44px;
+}
+
+.swiper-button-next {
+  right: 44px;
+
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+// стрелки отзывов
+.swiper-button--reviews {
+  top: 45%;
+
+  @media (min-width: $desktop-width) {
+    top: calc(49% + 1px);
+  }
+}
+
+.swiper-button--reviews-prev {
+  left: 4%;
+
+  @media (min-width: $desktop-width) {
+    left: calc(21% + 4px);
+  }
+}
+
+.swiper-button--reviews-next {
+  right: 4%;
+
+  @media (min-width: $desktop-width) {
+    right: calc(21% + 4px);
+  }
+
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+
+// проба
+.swiper-button:disabled::after {
+  background-color: red;
+  pointer-events: none;
+}
+
+.swiper-button:disabled {
+  pointer-events: none;
+}
+
+.swiper-button:active,
+.swiper-button:hover {
+  border: 1px red solid;
+  border-radius: 100%;
+  background-color: rgb(20, 20, 20);
+}
+
+.swiper-button:active::after {
+  background-color: #ffffff;
+}
