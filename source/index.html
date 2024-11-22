@@ -174,10 +174,12 @@
     <section class="jury" data-test="juri">
 
       <h2 class="jury__title section-title">Жюри</h2>
+      <button class="swiper-button swiper-button-prev"></button>
+      <button class="swiper-button swiper-button-next"></button>
       <div class="jury__swiper swiper">
         <div class="jury__list swiper-wrapper">
 
-          <div class="card card--pavlova swiper-slide">
+          <div class="card card--pavlova swiper-slide" tabindex="0">
             <h3 class="card__title">Анна Павлова</h3>
             <p class="card__subtitle">CrossFit</p>
             <ul class="card__list">
@@ -187,7 +189,7 @@
             </ul>
           </div>
 
-          <div class="card card--lavrov swiper-slide">
+          <div class="card card--lavrov swiper-slide" tabindex="0">
             <h3 class="card__title">Алексей Лавров</h3>
             <p class="card__subtitle">CrossFit</p>
             <ul class="card__list">
@@ -197,7 +199,7 @@
             </ul>
           </div>
 
-          <div class="swiper-slide card card--pashkov">
+          <div class="swiper-slide card card--pashkov" tabindex="0">
             <h3 class="card__title">Александр Пашков</h3>
             <p class="card__subtitle">CrossFit</p>
             <ul class="card__list">
@@ -207,7 +209,7 @@
             </ul>
           </div>
 
-          <div class="swiper-slide card card--ketova">
+          <div class="swiper-slide card card--ketova" tabindex="0">
             <h3 class="card__title">Мария Кетова</h3>
             <p class="card__subtitle">CrossFit</p>
             <ul class="card__list">
@@ -217,7 +219,7 @@
             </ul>
           </div>
 
-          <div class="swiper-slide card card--pavlova">
+          <div class="swiper-slide card card--pavlova" tabindex="0">
             <h3 class="card__title">Анна Павлова</h3>
             <p class="card__subtitle">CrossFit</p>
             <ul class="card__list">
@@ -227,7 +229,7 @@
             </ul>
           </div>
 
-          <div class="swiper-slide card card--pashkov">
+          <div class="swiper-slide card card--pashkov" tabindex="0">
             <h3 class="card__title">Александр Пашков</h3>
             <p class="card__subtitle">CrossFit</p>
             <ul class="card__list">
@@ -237,7 +239,7 @@
             </ul>
           </div>
 
-          <div class="swiper-slide card card--pashkov">
+          <div class="swiper-slide card card--pashkov" tabindex="0">
             <h3 class="card__title">Александр Пашков</h3>
             <p class="card__subtitle">CrossFit</p>
             <ul class="card__list">
@@ -247,7 +249,7 @@
             </ul>
           </div>
 
-          <div class="swiper-slide card card--ketova">
+          <div class="swiper-slide card card--ketova" tabindex="0">
             <h3 class="card__title">Мария Кетова</h3>
             <p class="card__subtitle">CrossFit</p>
             <ul class="card__list">
@@ -259,8 +261,7 @@
 
         </div>
       </div>
-      <div class="swiper-button swiper-button-prev"></div>
-      <div class="swiper-button swiper-button-next"></div>
+
     </section>
     <section class="features" data-test="features">
       <div class="features__wrapper">
@@ -348,7 +349,7 @@
           <div class="faq__tabpanel" role="tabpanel" aria-labelledby="center">
             <ul class="faq__tabpanel-list">
               <li>
-                <p class="faq__tab-text--open" aria-hidden="true">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                <p class="faq__tab-text-open" aria-hidden="false">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
                 <button type="button" aria-expanded="true"><span>Как стать членом фитнес-центра?</span></button>
               </li>
               <li>
@@ -440,23 +441,34 @@
     <section class="reviews" data-test="reviews">
       <div class="reviews__wrapper">
         <h2 class="reviews__title section-title">Отзывы</h2>
-        <ul class="reviews__list">
-          <li class="reviews__slide">
-            <div><img src="img/images/reviews/orlova@2x.webp" alt=" аватар пользователя Анна Орлова" width="80" height="107"></div>
-            <h3 class="reviews__slide-name">Анна Орлова</h3>
-            <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-          </li>
-          <li class="reviews__slide">
-            <img src="img/images/reviews/orlova@2x.webp" alt="аватар пользователя Чекистова Сетлана" width="80" height="107">
-            <h3 class="reviews__slide-name">Чекистова Светлана</h3>
-            <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-          </li>
-          <li class="reviews__slide">
-            <img src="img/images/promo/promo-mobile@2x.webp" alt="аватар пользователя Кактус Колючий" width="80" height="107">
-            <h3 class="reviews__slide-name">Кактус Колючий</h3>
-            <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-          </li>
-        </ul>
+        <div class="reviews__swiper">
+          <button class="swiper-button swiper-button--reviews swiper-button--reviews-prev"></button>
+          <button class="swiper-button swiper-button--reviews swiper-button--reviews-next"></button>
+          <ul class="reviews__list swiper-wrapper">
+            <li class="swiper-slide">
+              <img src="img/images/reviews/orlova@2x.webp" alt=" аватар пользователя Анна Орлова" width="110" height="150">
+              <div>
+                <h3>Анна Орлова</h3>
+                <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <img src="img/images/reviews/orlova@2x.webp" alt="аватар пользователя Чекистова Сетлана" width="110" height="150">
+              <div>
+                <h3>Чекистова Светлана</h3>
+                <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <img src="img/images/promo/promo-mobile@2x.webp" alt="аватар пользователя Кактус Колючий" width="110" height="150">
+              <div>
+                <h3>Кактус Колючий</h3>
+                <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </section>
     <div class="form-section" data-test="form">

@@ -1,0 +1,132 @@
+.reviews__wrapper {
+  padding: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 45px;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 103px;
+    width: 1366px;
+    margin: 0 auto;
+  }
+}
+
+.reviews__title {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    line-height: 1;
+    font-weight: 600;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 75px;
+  }
+}
+
+.reviews__list {
+  @include list-reset;
+
+  display: flex;
+  width: 240px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+  }
+}
+
+.reviews__list li {
+  background-color: $button-border;
+  color: $base-text-color-light;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 328px;
+  padding: 30px 25px;
+  min-width: 240px;
+  margin-bottom: 50px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    min-width: 500px;
+    min-height: 237px;
+    flex-direction: row;
+    text-align: left;
+    gap: 21px;
+    padding: 40px 30px;
+    box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 560px;
+    padding: 39px 60px;
+
+    // margin-left: -30px;
+    gap: 11px;
+  }
+}
+
+.reviews__list h3 {
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: -57px;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.reviews__list p {
+  margin: 0;
+}
+
+.reviews__list img {
+  display: block;
+  margin-top: -15px;
+
+  mask-image: radial-gradient(circle, $base-text-color 50%, transparent 50%);
+  mask-size: 96px 96px;
+  mask-repeat: no-repeat;
+  mask-position: 7px 1px;
+  padding-right: 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 120px;
+    height: 180px;
+    align-self: flex-start;
+    mask-size: 113px 113px;
+    mask-position: 4px 1px;
+    margin-left: -21px;
+    margin-top: -18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    mask-position: 5px 5px;
+    margin-top: 0;
+  }
+}
+
+.reviews__swiper {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+  }
+}

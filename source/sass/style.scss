@@ -23,41 +23,8 @@
 @import "./blocks/features";
 @import "./blocks/offers";
 @import "./blocks/faq";
+@import "./blocks/reviews";
 
-
-.reviews__slide h3 {
-  margin-top: -30px;
-}
-
-.reviews__list {
-  display: flex;
-  gap: 20px;
-  overflow: hidden;
-  width: 240px;
-}
-
-.reviews__slide {
-  background-color: blue;
-  color: #ffffff;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-height: 328px;
-  padding: 30px 25px;
-  min-width: 240px;
-  margin-bottom: 50px;
-}
-
-.reviews__slide img {
-  width: 74px;
-  height: 103px;
-  display: block;
-  mask-image: radial-gradient(circle, black 50%, transparent 50%);
-  mask-size: 68px 68px;
-  mask-repeat: no-repeat;
-  mask-position: top, center;
-}
 
 .footer__wrapper {
   @media (width >= 768px) {

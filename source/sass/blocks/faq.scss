@@ -158,7 +158,7 @@
   }
 }
 
-.faq__tabpanel-list .faq__tab-text--open {
+.faq__tabpanel-list .faq__tab-text-open {
   opacity: 1;
   margin: 0;
   max-height: 600px;
@@ -180,6 +180,7 @@
   position: relative;
   order: 1;
   cursor: pointer;
+  transition: all 300ms ease-in;
 
   @media (min-width: $desktop-width) {
     width: 860px;
@@ -236,7 +237,7 @@
 }
 
 // кнопка -
-.faq__tab-text--open + button::after {
+.faq__tab-text-open + button::after {
   content: "";
   width: 30px;
   height: 30px;
@@ -260,7 +261,7 @@
   }
 }
 
-.faq__tab-text--open + button::before {
+.faq__tab-text-open + button::before {
   content: "";
   width: 14px;
   height: 1px;
@@ -284,7 +285,7 @@
   }
 }
 
-.faq__tab-text--open + button > span {
+.faq__tab-text-open + button > span {
   @media (min-width: $tablet-width) {
     margin-bottom: 18px;
   }

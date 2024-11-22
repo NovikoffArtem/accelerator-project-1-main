@@ -204,10 +204,10 @@
   }
 }
 
-li:nth-child(5n+3) h3 {
+.features__list li:nth-child(5n+3) h3 {
   background: linear-gradient($base-text-color-light 100%, $base-text-color-light 100%);
   background-clip: text;
-  color: #ffffff;
+  color: $base-text-color-light;
   gap: 5px;
   margin-bottom: 1px;
 

@@ -82,10 +82,10 @@
 }
 
 .swiper-slide {
-  max-width: 260px;
+  // max-width: 260px;
   flex-grow: 0;
   flex-shrink: 0;
-  // width: 100%;
+  width: 100%;
   height: 100%;
   position: relative;
   transition-property: transform;
@@ -295,6 +295,10 @@
 
 /* Slide styles end */
 .swiper-button {
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     width: 30px;
     height: 45px;
@@ -302,6 +306,8 @@
     position: absolute;
     top: 48%;
     transform: translateY(50%);
+    background-color: transparent;
+    border: none;
 
 
 
@@ -330,6 +336,35 @@
 
 .swiper-button-next {
   right: 44px;
+
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+// стрелки отзывов
+.swiper-button--reviews {
+  top: 45%;
+
+  @media (min-width: $desktop-width) {
+    top: calc(49% + 1px);
+  }
+}
+
+.swiper-button--reviews-prev {
+  left: 4%;
+
+  @media (min-width: $desktop-width) {
+    left: calc(21% + 4px);
+  }
+}
+
+.swiper-button--reviews-next {
+  right: 4%;
+
+  @media (min-width: $desktop-width) {
+    right: calc(21% + 4px);
+  }
 
   &::after {
     transform: rotate(180deg);
