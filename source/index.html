@@ -55,14 +55,15 @@
           <img class="about__image" src="img/images/jym/jym-mobile@1x.jpg" srcset="img/images/jym/jym-mobile@2x.jpg 2x" width="320" height="280" alt="Тренажерный зал">
         </picture>
       </div>
-      <div class="video">
+      <div class="video" data-video="https://youtu.be/9TZXsZItgdw?si=LdxOIASQRwKJtDj3">
         <div class="video__preview">
           <button class="video__button" type="button"><span class="visually-hidden">Запустить видео</span></button>
         </div>
       </div>
+      </div>
     </section>
     <section class="price" data-test="price" id="price-block">
-      <div class="price__wrapper">
+      <div class="price__wrapper content-wrapper">
         <h2 class="price__title section-title">Абонементы</h2>
         <div class="price__tab">
           <div class="price__tablist" role="tablist" aria-label="Выбор абонеммента">
@@ -97,54 +98,11 @@
             </li>
           </ul>
         </div>
-        <!-- <div class="price__tabpanel" role="tabpanel" aria-labelledby="half-year" hidden>
-            <ul class="price__list">
-              <li class="price__item price-card">
-                <h3 class="price-card__title">С тренером</h3>
-                <p class="price-card__description">12 занятий</p>
-                <span class="price-card__count">30000</span>
-                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
-              </li>
-              <li class="price__item price-card">
-                <h3 class="price-card__title">Дневной</h3>
-                <p class="price-card__description">с 8:00 до 17:00</p>
-                <span class="price-card__count">10200</span>
-                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
-              </li>
-              <li class="price__item price-card">
-                <h3 class="price-card__title">Полный день</h3>
-                <p class="price-card__description">с 8:00 до 22:00</p>
-                <span class="price-card__count">16200</span>
-                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
-              </li>
-            </ul>
-          </div>
-          <div class="price__tabpanel" role="tabpanel" aria-labelledby="half-year" hidden>
-            <ul class="price__list">
-              <li class="price__item price-card">
-                <h3 class="price-card__title">С тренером</h3>
-                <p class="price-card__description">12 занятий</p>
-                <span class="price-card__count">60000</span>
-                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
-              </li>
-              <li class="price__item price-card">
-                <h3 class="price-card__title">Дневной</h3>
-                <p class="price-card__description">с 8:00 до 17:00</p>
-                <span class="price-card__count">20400</span>
-                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
-              </li>
-              <li class="price__item price-card">
-                <h3 class="price-card__title">Полный день</h3>
-                <p class="price-card__description">с 8:00 до 22:00</p>
-                <span class="price-card__count">16200</span>
-                <a class="price-card__button button--primary button" href="#">Купить абонемент</a>
-              </li>
-            </ul>
-          </div> -->
+
       </div>
 
     </section>
-    <section class="games" data-test="games">
+    <section class="games content-wrapper" data-test="games">
       <div class="games__wrapper">
         <div class="games__text">
           <h2 class="games__title">super games</h2>
@@ -173,98 +131,100 @@
     </section>
     <section class="jury" data-test="juri">
 
-      <h2 class="jury__title section-title">Жюри</h2>
-      <button class="swiper-button swiper-button-prev"></button>
-      <button class="swiper-button swiper-button-next"></button>
-      <div class="jury__swiper swiper">
-        <div class="jury__list swiper-wrapper">
+      <div class="content-wrapper jury__wrapper">
+        <h2 class="jury__title section-title">Жюри</h2>
+        <button class="swiper-button swiper-button-prev"></button>
+        <button class="swiper-button swiper-button-next"></button>
+        <div class="jury__swiper swiper">
+          <ul class="jury__list swiper-wrapper">
 
-          <div class="card card--pavlova swiper-slide" tabindex="0">
-            <h3 class="card__title">Анна Павлова</h3>
-            <p class="card__subtitle">CrossFit</p>
-            <ul class="card__list">
-              <li class="card-item">Certified Level 3 Trainer</li>
-              <li class="card-item">Победитель чемпионата России по CrossFit</li>
-              <li class="card-item">Опыт — 6 лет</li>
-            </ul>
-          </div>
+            <li class="card card--pavlova swiper-slide" tabindex="0">
+              <h3 class="card__title">Анна Павлова</h3>
+              <p class="card__subtitle">CrossFit</p>
+              <ul class="card__list">
+                <li class="card-item">Certified Level 3 Trainer</li>
+                <li class="card-item">Победитель чемпионата России по CrossFit</li>
+                <li class="card-item">Опыт — 6 лет</li>
+              </ul>
+            </li>
 
-          <div class="card card--lavrov swiper-slide" tabindex="0">
-            <h3 class="card__title">Алексей Лавров</h3>
-            <p class="card__subtitle">CrossFit</p>
-            <ul class="card__list">
-              <li class="card-item">Certified Level 3 Trainer</li>
-              <li class="card-item">Победитель чемпионата России по CrossFit</li>
-              <li class="card-item">Опыт — 6 лет</li>
-            </ul>
-          </div>
+            <li class="card card--lavrov swiper-slide" tabindex="0">
+              <h3 class="card__title">Алексей Лавров</h3>
+              <p class="card__subtitle">CrossFit</p>
+              <ul class="card__list">
+                <li class="card-item">Certified Level 3 Trainer</li>
+                <li class="card-item">Победитель чемпионата России по CrossFit</li>
+                <li class="card-item">Опыт — 6 лет</li>
+              </ul>
+            </li>
 
-          <div class="swiper-slide card card--pashkov" tabindex="0">
-            <h3 class="card__title">Александр Пашков</h3>
-            <p class="card__subtitle">CrossFit</p>
-            <ul class="card__list">
-              <li class="card-item">Certified Level 3 Trainer</li>
-              <li class="card-item">Победитель чемпионата России по CrossFit</li>
-              <li class="card-item">Опыт — 6 лет</li>
-            </ul>
-          </div>
+            <li class="swiper-slide card card--pashkov" tabindex="0">
+              <h3 class="card__title">Александр Пашков</h3>
+              <p class="card__subtitle">CrossFit</p>
+              <ul class="card__list">
+                <li class="card-item">Certified Level 3 Trainer</li>
+                <li class="card-item">Победитель чемпионата России по CrossFit</li>
+                <li class="card-item">Опыт — 6 лет</li>
+              </ul>
+            </li>
 
-          <div class="swiper-slide card card--ketova" tabindex="0">
-            <h3 class="card__title">Мария Кетова</h3>
-            <p class="card__subtitle">CrossFit</p>
-            <ul class="card__list">
-              <li class="card-item">Certified Level 3 Trainer</li>
-              <li class="card-item">Победитель чемпионата России по CrossFit</li>
-              <li class="card-item">Опыт — 6 лет</li>
-            </ul>
-          </div>
+            <li class="swiper-slide card card--ketova" tabindex="0">
+              <h3 class="card__title">Мария Кетова</h3>
+              <p class="card__subtitle">CrossFit</p>
+              <ul class="card__list">
+                <li class="card-item">Certified Level 3 Trainer</li>
+                <li class="card-item">Победитель чемпионата России по CrossFit</li>
+                <li class="card-item">Опыт — 6 лет</li>
+              </ul>
+            </li>
 
-          <div class="swiper-slide card card--pavlova" tabindex="0">
-            <h3 class="card__title">Анна Павлова</h3>
-            <p class="card__subtitle">CrossFit</p>
-            <ul class="card__list">
-              <li class="card-item">Certified Level 3 Trainer</li>
-              <li class="card-item">Победитель чемпионата России по CrossFit</li>
-              <li class="card-item">Опыт — 6 лет</li>
-            </ul>
-          </div>
+            <li class="swiper-slide card card--pavlova">
+              <h3 class="card__title">Анна Павлова</h3>
+              <p class="card__subtitle">CrossFit</p>
+              <ul class="card__list">
+                <li class="card-item">Certified Level 3 Trainer</li>
+                <li class="card-item">Победитель чемпионата России по CrossFit</li>
+                <li class="card-item">Опыт — 6 лет</li>
+              </ul>
+            </li>
 
-          <div class="swiper-slide card card--pashkov" tabindex="0">
-            <h3 class="card__title">Александр Пашков</h3>
-            <p class="card__subtitle">CrossFit</p>
-            <ul class="card__list">
-              <li class="card-item">Certified Level 3 Trainer</li>
-              <li class="card-item">Победитель чемпионата России по CrossFit</li>
-              <li class="card-item">Опыт — 6 лет</li>
-            </ul>
-          </div>
+            <li class="swiper-slide card card--pashkov">
+              <h3 class="card__title">Александр Пашков</h3>
+              <p class="card__subtitle">CrossFit</p>
+              <ul class="card__list">
+                <li class="card-item">Certified Level 3 Trainer</li>
+                <li class="card-item">Победитель чемпионата России по CrossFit</li>
+                <li class="card-item">Опыт — 6 лет</li>
+              </ul>
+            </li>
 
-          <div class="swiper-slide card card--pashkov" tabindex="0">
-            <h3 class="card__title">Александр Пашков</h3>
-            <p class="card__subtitle">CrossFit</p>
-            <ul class="card__list">
-              <li class="card-item">Certified Level 3 Trainer</li>
-              <li class="card-item">Победитель чемпионата России по CrossFit</li>
-              <li class="card-item">Опыт — 6 лет</li>
-            </ul>
-          </div>
+            <li class="swiper-slide card card--pashkov">
+              <h3 class="card__title">Александр Пашков</h3>
+              <p class="card__subtitle">CrossFit</p>
+              <ul class="card__list">
+                <li class="card-item">Certified Level 3 Trainer</li>
+                <li class="card-item">Победитель чемпионата России по CrossFit</li>
+                <li class="card-item">Опыт — 6 лет</li>
+              </ul>
+            </li>
 
-          <div class="swiper-slide card card--ketova" tabindex="0">
-            <h3 class="card__title">Мария Кетова</h3>
-            <p class="card__subtitle">CrossFit</p>
-            <ul class="card__list">
-              <li class="card-item">Certified Level 3 Trainer</li>
-              <li class="card-item">Победитель чемпионата России по CrossFit</li>
-              <li class="card-item">Опыт — 6 лет</li>
-            </ul>
-          </div>
+            <li class="swiper-slide card card--ketova">
+              <h3 class="card__title">Мария Кетова</h3>
+              <p class="card__subtitle">CrossFit</p>
+              <ul class="card__list">
+                <li class="card-item">Certified Level 3 Trainer</li>
+                <li class="card-item">Победитель чемпионата России по CrossFit</li>
+                <li class="card-item">Опыт — 6 лет</li>
+              </ul>
+            </li>
 
+          </ul>
         </div>
       </div>
 
     </section>
     <section class="features" data-test="features">
-      <div class="features__wrapper">
+      <div class="features__wrapper content-wrapper">
         <h2 class="features__title section-title">Наши преимущества</h2>
         <ul class="features__list">
           <li>
@@ -303,7 +263,7 @@
       </div>
     </section>
     <section class="offers" data-test="offers">
-      <div class="offers__wrapper">
+      <div class="offers__wrapper content-wrapper">
         <h2 class="offers__title section-title">Акции</h2>
         <div class="offers__content-wrapper">
           <div class="offers__year">
@@ -314,10 +274,10 @@
             </div>
             <picture>
               <source media="(min-width: 1366px)" type="image/webp" srcset="img/images/promo/promo-desktop@1x.webp 1x, img/images/promo/promo-desktop@2x.webp 2x" width="280" height="460">
-              <source media="(min-width: 500px)" type="image/webp" srcset="img/images/promo/promo-tablet@1x.webp 1x, img/images/promo/promo-tablet@2x.webp 2x" width="400" height="462">
+              <source media="(min-width: 400px)" type="image/webp" srcset="img/images/promo/promo-tablet@1x.webp 1x, img/images/promo/promo-tablet@2x.webp 2x" width="400" height="462">
               <source type="image/webp" srcset="img/images/promo/promo-mobile@1x.webp 1x, img/images/promo/promo-mobile@2x.webp 2x" width="320" height="360">
               <source media="(min-width: 1366px)" type="image/jpg" srcset="img/images/promo/promo-desktop@1x.jpg 1x, img/images/promo/promo-desktop@2x.jpg 2x" width="280" height="460">
-              <source media="(min-width: 500px)" type="image/jpg" srcset="img/images/promo/promo-tablet@1x.jpg 1x, img/images/promo/promo-tablet@2x.jpg 2x" width="400" height="462">
+              <source media="(min-width: 400px)" type="image/jpg" srcset="img/images/promo/promo-tablet@1x.jpg 1x, img/images/promo/promo-tablet@2x.jpg 2x" width="400" height="462">
               <img class="offers__image" src="img/images/promo/promo-mobile@1x.jpg" srcset="img/images/promo/promo-mobile@2x.jpg 2x" width="320" height="360" alt="Мужчина занимается спортом">
             </picture>
           </div>
@@ -337,7 +297,7 @@
       </div>
     </section>
     <section class="faq" data-test="faq">
-      <div class="faq__wrapper">
+      <div class="faq__wrapper content-wrapper">
         <h2 class="faq__title section-title">Вопросы и ответы</h2>
         <div class="faq__tab">
           <div class="faq__tablist" role="tablist" aria-label="Выбор категории">
@@ -439,7 +399,7 @@
       </div>
     </section>
     <section class="reviews" data-test="reviews">
-      <div class="reviews__wrapper">
+      <div class="reviews__wrapper content-wrapper">
         <h2 class="reviews__title section-title">Отзывы</h2>
         <div class="reviews__swiper">
           <button class="swiper-button swiper-button--reviews swiper-button--reviews-prev"></button>
@@ -477,13 +437,11 @@
         <form class="form__main" action="https://echo.htmlacademy.ru/" method="post">
           <label>
             <span class="visually-hidden">Напишите Ваше Имя</span>
-            <input class="form__field" type="text" name="name" id="name" placeholder="Имя" required>
-            <span class="form__error form__error--text"></span>
+            <input class="form__field form__field--name" type="text" name="name" id="name" placeholder="Имя">
           </label>
           <label>
             <span class="visually-hidden">Напишите Ваш номер телефона</span>
-            <input class="form__field" type="number" name="phone" id="phone" placeholder="Телефон" required>
-            <span class="form__error form__error--number"></span>
+            <input class="form__field form__field--phone" type="tel" name="phone" id="phone" placeholder="Телефон" minlength="2" maxlength="14">
           </label>
           <button class="form__button button--primary button" type="submit">Отправить</button>
         </form>
@@ -501,11 +459,11 @@
           </li>
           <li class="contacts__item contacts__item--phone">
             <h3 class="contacts__item-title">Телефон:</h3>
-            <p class="contacts__item-description">8 800 555-55-55</p>
+            <p class="contacts__item-description"><a href="tel:88005555555">8 800 555-55-55</a></p>
           </li>
           <li class="contacts__item contacts__item--email">
             <h3 class="contacts__item-title">Email:</h3>
-            <p class="contacts__item-description">oмск@supergym.ru</p>
+            <p class="contacts__item-description"><a href="mailto:oмск@supergym.ru">oмск@supergym.ru</a></p>
           </li>
         </ul>
       </div>
@@ -529,7 +487,7 @@
         </li>
         <li class="footer__social-item">
           <a class="footer__social-link footer__social-link--ok" href="#">
-            <span>Мы в одноклассниках</span>
+            <span class="visually-hidden">Мы в одноклассниках</span>
           </a>
         </li>
         <li class="footer__social-item">
@@ -540,11 +498,6 @@
       </ul>
     </div>
   </footer>
-
-  <!-- <svg>
-    <use href="/__spritemap#sprite-logo"></use>
-  </svg> -->
-
   <script type="module" src="js/main.js"></script>
 </body>
 

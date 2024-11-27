@@ -56,9 +56,11 @@
   font-weight: 400;
   width: 100%;
   background-color: transparent;
+
   border: none;
   padding-block: 5px;
   padding-left: 0;
+
   border-bottom: 1px solid $faq-divider;
   color: $base-text-color-light;
 
@@ -91,4 +93,10 @@
 
 .form__error {
   color: $error-accent;
+  margin: 0;
+  margin-right: 4px;
+}
+
+.form__field--error {
+  border-bottom: 1px solid $error-accent;
 }

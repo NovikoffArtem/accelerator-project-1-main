@@ -4,6 +4,7 @@
 @import "./common/fonts";
 @import "./common/global";
 @import "./common/visually-hidden";
+@import "./common/content-wrapper";
 @import "../sass/vendor/swiper";
 @import "../sass/vendor/swiper-vars";
 @import "./blocks/section-title";
@@ -28,26 +29,5 @@
 @import "./blocks/form-contacts";
 @import "./blocks/form-section";
 @import "./blocks/contacts";
+@import "./blocks/footer";
 
-.footer__wrapper {
-  @media (width >= 768px) {
-    display: flex;
-    justify-content: space-between;
-    background-color: rebeccapurple;
-  }
-}
-
-.footer__nav-list {
-  @include list-reset;
-
-  display: flex;
-  flex-flow: row wrap;
-  gap: 35px;
-}
-
-.footer__social {
-  @include list-reset;
-
-  display: flex;
-  flex-flow: row wrap;
-}

@@ -1,18 +1,6 @@
 .reviews__wrapper {
-  padding: 40px;
-
-  // background-color: rebeccapurple;
-
-  @media (min-width: $tablet-width) {
-    padding: 60px 45px;
-    position: relative;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 100px 103px;
-    max-width: 1366px;
-    margin: 0 auto;
-  }
+  position: relative;
+  user-select: none;
 }
 
 .reviews__title {
@@ -121,11 +109,11 @@
 }
 
 .reviews__swiper {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   overflow: hidden;
   z-index: 1;
   display: block;
+  width: 240px;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;

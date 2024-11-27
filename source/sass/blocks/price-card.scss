@@ -6,6 +6,36 @@
   gap: 18px;
   width: 100%;
   max-width: 380px;
+  position: relative;
+
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 7px solid;
+    border-image-source: linear-gradient(148.82deg, $features-grad-1 0.85%, $border-gradient 100%);
+    border-image-slice: 1;
+    position: absolute;
+    inset: 0;
+    display: none;
+  }
+
+  &:hover::after {
+    display: block;
+  }
+
+  &:hover .price-card__button {
+    background: linear-gradient(97.05deg, $features-grad-1 17.6%, $border-gradient 95.31%);
+    border: none;
+    color: $base-text-color-light;
+    padding-block: 27px;
+    cursor: pointer;
+  }
+
+  &:has(.price-card__button:focus-visible)::after {
+    display: block;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 65px;
@@ -15,6 +45,7 @@
   @media (min-width: $desktop-width) {
     max-width: 360px;
     gap: 17px;
+    min-height: 447px;
   }
 }
 
@@ -78,7 +109,6 @@
     }
   }
 
-
   &::after {
     content: "";
     background-image: url("../../__spritemap#sprite-ruble-view");
@@ -102,9 +132,18 @@
   border: 2px solid $base-text-color;
   width: 100%;
   padding: 25px 10px;
+  z-index: 2;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     padding: 25px;
-    height: auto;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background: linear-gradient(97.05deg, $bg-accent 17.6%, $play-button-gradient 95.31%);
+    border: none;
+    color: $base-text-color-light;
+    padding-block: 27px;
   }
 }

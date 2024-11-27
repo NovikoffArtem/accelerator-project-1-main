@@ -1,0 +1,107 @@
+.footer {
+  background-color: $dark-footer;
+}
+
+.footer__wrapper {
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @media (width >= $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px;
+    flex-direction: row;
+  }
+
+  @media (width >= $desktop-width) {
+    padding: 40px 103px;
+
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+}
+
+.footer__nav-list {
+  @include list-reset;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px 35px;
+
+  @media (width >= $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (width >= $desktop-width) {
+    gap: 82px;
+  }
+}
+
+.footer__nav-link {
+  line-height: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: $base-text-color-light;
+  display: block;
+  padding-block: 5px;
+
+  @media (width >= $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+    padding-block: 0;
+  }
+}
+
+.footer__social {
+  @include list-reset;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+
+  @media (width >= $tablet-width) {
+    gap: 15px;
+  }
+
+  @media (width >= $tablet-width) {
+    gap: 15px;
+  }
+}
+
+.footer__social-link {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  display: block;
+  background-color: $base-text-color-light;
+  position: relative;
+
+  &::after {
+    content: "";
+    mask-repeat: no-repeat;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    background-color: $dark-footer;
+  }
+}
+
+.footer__social-link--vk::after {
+  width: 13px;
+  height: 8px;
+  mask-image: url("../../__spritemap#sprite-vk-view");
+}
+
+.footer__social-link--ok::after {
+  width: 10px;
+  height: 17px;
+  mask-image: url("../../__spritemap#sprite-ok-view");
+}
+
+.footer__social-link--reddit::after {
+  width: 15px;
+  height: 15px;
+  mask-image: url("../../__spritemap#sprite-baby-view");
+}

@@ -14,6 +14,7 @@ $dark-footer: #030a1a;
 $error-accent: #ff121f;
 $play-button-gradient: #003eb7;
 $text-color-no-active: rgba(16, 38, 84, 0.5);
+$play-buton-bg: rgba(16, 38, 84, 0.6);
 $tab-border: rgba(120, 120, 120, 0.2);
 $price-shadow: #e8e8e8;
 $card-subcolor: #b6bdcc;
@@ -24,10 +25,17 @@ $features-border: rgba(209, 10, 66, 0.2);
 $border-gradient: #00359f;
 $faq-tab-button-border: rgba(16, 38, 84, 0.2);
 $faq-divider: #74819c;
+$price-button-hover: rgba(16, 38, 84, 0.7);
+$price-hover-line: #787878;
+$play-circle: #c8c9cc;
+$play-border: rgba(237, 2, 51, 0.2);
 
 
 // разрешения
-$tablet-width: 768px;
 $desktop-width: 1366px;
+$max-tablet-width: 1000px;
+$tablet-width: 768px;
 $max-mobile-width: 767px;
+$min-tablet-width: 550px;
+$middle-mobile-width: 450px;
 $min-mobile-width: 320px;

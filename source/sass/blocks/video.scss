@@ -1,3 +1,7 @@
+.video {
+
+}
+
 .video__preview {
   width: 320px;
   height: 170px;
@@ -50,57 +54,141 @@
 }
 
 .video__button {
-  width: 52px;
-  height: 52px;
-  border-radius: 100%;
-  border: none;
-  background: linear-gradient(90deg, $bg-accent 0%, $play-button-gradient 100%);
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  z-index: 1;
-  cursor: pointer;
-
-  @media (min-width: $desktop-width) {
-    width: 72px;
-    height: 72px;
-  }
-}
-
-.video__button::before {
-  content: "";
   width: 72px;
   height: 72px;
   border-radius: 100%;
-  border: 2px solid $bg-accent;
-  opacity: 0.2;
+  border: 2px solid $play-border;
+  background-color: transparent;
   position: absolute;
-  right: -10px;
-  bottom: -10px;
+  inset: 0;
+  margin: auto;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
 
   @media (min-width: $desktop-width) {
     width: 100px;
     height: 100px;
-    right: -14px;
-    bottom: -14px;
+  }
+
+
+  &:disabled {
+    border-color: $faq-tab-button-border;
+    pointer-events: none;
+  }
+
+  &:disabled::before {
+    background: none;
+    background-color: $base-text-color-light;
+  }
+
+  &:disabled::after {
+    background-color: $faq-tab-button-border;
+  }
+
+  &:hover {
+    border-color: $text-color-no-active;
+  }
+
+  &:active {
+    border-color: $base-text-color;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $base-text-color;
+  }
+
+  &:hover::before {
+    background: none;
+    background-color: $base-text-color-light;
+  }
+
+  &:focus-visible::before {
+    background: none;
+    background-color: $play-circle;
+  }
+
+  &:hover::after {
+    background-color: $play-buton-bg;
+  }
+
+  &:focus-visible::after {
+    background-color: $base-text-color;
+  }
+
+  &:active::before {
+    background: none;
+    background-color: $base-text-color-light;
+    transform: scale(0.8);
+  }
+
+  &:active::after {
+    background-color: $base-text-color;
+  }
+
+  &::before {
+    content: "";
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+    border: none;
+    background: linear-gradient(90deg, $bg-accent 0%, $play-button-gradient 100%);
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    opacity: 1;
+    margin: auto;
+    transition: all 200ms ease-in-out;
+
+    @media (min-width: $desktop-width) {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 9px;
+    height: 12px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    mask-image: url("../../__spritemap#sprite-play-button-view");
+    background-color: $base-text-color-light;
+    mask-repeat: no-repeat;
+    z-index: 30;
+
+    @media (min-width: $desktop-width) {
+      width: 13px;
+      height: 17px;
+      left: 4px;
+      top: -1px;
+    }
   }
 }
 
-.video__button::after {
-  content: "";
-  width: 9px;
-  height: 12px;
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  mask-image: url("../../__spritemap#sprite-play-button-view");
-  background-color: $base-text-color-light;
-  mask-repeat: no-repeat;
+.video iframe {
+  display: block;
+  border: none;
+  width: 320px;
+  height: 170px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 40px;
+  background-color: $base-text-color;
+
+  @media (min-width: $tablet-width) {
+    width: 270px;
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+  }
 
   @media (min-width: $desktop-width) {
-    width: 13px;
-    height: 17px;
-    left: 4px;
-    top: -1px;
+    width: 360px;
+    height: 230px;
+    bottom: 5px;
   }
 }

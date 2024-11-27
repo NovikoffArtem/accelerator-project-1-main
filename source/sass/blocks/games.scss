@@ -1,22 +1,10 @@
-.games {
-  padding: 25px 15px;
-  color: $base-text-color-light;
-
-  @media (min-width: $tablet-width) {
-    padding: 60px 45px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 100px 103px;
-    max-width: 1366px;
-    margin: 0 auto;
-  }
-}
-
 .games__wrapper {
   background-color: $bg-accent;
+  color: $base-text-color-light;
+  margin-top: -15px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     display: flex;
     justify-content: space-between;
   }

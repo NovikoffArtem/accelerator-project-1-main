@@ -58,7 +58,6 @@
 
   @media (min-width: $desktop-width) {
     max-width: 350px;
-    padding-bottom: 8px;
     margin-bottom: 40px;
     gap: 50px;
   }
@@ -75,6 +74,12 @@
   background-color: transparent;
   cursor: pointer;
 
+
+  &:focus-visible {
+    outline: none;
+    color: $base-text-color;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 18px;
   }
@@ -82,6 +87,50 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
   }
+}
+
+
+.price__tab-button--active span {
+  padding-bottom: 5px;
+  color: $base-text-color;
+  border-bottom: 2px solid $features-grad-1;
+  cursor: auto;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 5px;
+  }
+}
+
+.price__tab-button:hover span {
+  color: $price-button-hover;
+  border-bottom: 2px solid $price-hover-line;
+  padding-bottom: 5px;
+}
+
+
+.price__tab-button:focus-visible span {
+  border-bottom: 2px solid $base-text-color;
+  padding-bottom: 5px;
+}
+
+.price__tab-button--active:hover span {
+  color: $base-text-color;
+  border-bottom: 2px solid $features-grad-1;
+}
+
+.price__tab-button--active:focus-visible {
+  color: $base-text-color;
+}
+
+.price__tab-button--active:focus-visible span {
+  border-bottom: 2px solid $features-grad-1;
+}
+
+.price__tab-button:disabled span {
+  color: $base-text-color;
+  opacity: 0.3;
+  border-bottom: none;
+  cursor: auto;
 }
 
 .price__tab-button:first-child {
@@ -99,7 +148,6 @@
 
 .price__tab-button:last-child {
   text-align: right;
-
   max-width: 77px;
 
   @media (min-width: $tablet-width) {
@@ -108,17 +156,6 @@
 
   @media (min-width: $desktop-width) {
     max-width: 96px;
-  }
-}
-
-.price__tab-button--active span {
-  padding-bottom: 5px;
-  color: $base-text-color;
-  border-bottom: 2px solid #d10a42;
-  cursor: auto;
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 6px;
   }
 }
 

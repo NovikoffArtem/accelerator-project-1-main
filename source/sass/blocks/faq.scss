@@ -2,29 +2,17 @@
   background-color: $bg-primary;
 }
 
-.faq__wrapper {
-  padding: 70px 15px;
-
-
-  @media (min-width: $tablet-width) {
-    padding: 61px 45px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 100px 103px;
-    width: 1366px;
-    margin: 0 auto;
-  }
-}
-
 .faq__title {
+  margin-top: 30px;
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 1px;
     margin-bottom: 44px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 0;
     text-align: left;
     margin-bottom: 50px;
   }
@@ -79,10 +67,10 @@
 }
 
 .faq__tab-button--current {
-  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, $bg-accent 17.6%, $play-button-gradient 95.31%);
   color: $base-text-color-light;
-  padding: 15px 22px;
   border: none;
+  pointer-events: none;
 
   @media (min-width: $desktop-width) {
     padding-block: 18px;
@@ -147,10 +135,22 @@
   margin: 0;
   order: 2;
 
+  @media (min-width: $middle-mobile-width) {
+    width: 380px;
+  }
+
+  @media (min-width: $min-tablet-width) {
+    width: 500px;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
     width: 560px;
+  }
+
+  @media (min-width: $max-tablet-width) {
+    width: 740px;
   }
 
   @media (min-width: $desktop-width) {
@@ -169,6 +169,7 @@
     padding-bottom: 23px;
   }
 }
+
 
 // кнопка +
 .faq__tabpanel-list button {

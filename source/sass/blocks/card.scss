@@ -22,6 +22,7 @@
     display: none;
   }
 
+  &:focus,
   &:hover {
     flex-direction: column;
     align-items: center;
@@ -32,23 +33,24 @@
   &:hover::after {
     display: block;
   }
+
+  &:focus::after {
+    display: block;
+  }
 }
 
+.card:focus .card__subtitle,
 .card:hover .card__subtitle {
   display: block;
   z-index: 1;
 }
 
+.card:focus .card__list,
 .card:hover .card__list,
 .card__title {
   display: flex;
   z-index: 1;
 }
-
-.card:hover .swiper__item-content {
-  flex-direction: column;
-}
-
 
 .card__title {
   font-size: 22px;
@@ -62,6 +64,7 @@
   font-size: 16px;
   line-height: 24px;
   color: $card-subcolor;
+  display: none;
 }
 
 .card--pavlova {
@@ -101,21 +104,15 @@
 }
 
 .card__list {
-  display: flex;
   flex-direction: column;
   gap: 12px;
   font-weight: 400;
   padding-left: 20px;
+  display: none;
 }
 
 .card-item {
   list-style-type: disc;
   font-size: 14px;
   line-height: 22px;
-}
-
-
-.card__subtitle,
-.card__list {
-  display: none;
 }
