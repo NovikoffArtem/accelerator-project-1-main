@@ -29,7 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-self: center;
+  justify-content: center;
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
@@ -38,6 +38,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
+    justify-content: start;
   }
 }
 
@@ -50,9 +51,9 @@
   background-color: inherit;
   color: $base-text-color;
   min-width: 140px;
-  padding: 14px 22px;
+  padding: 14px 10px;
   border: 1px solid $faq-tab-button-border;
-  cursor: pointer;
+  transition: all 300ms ease;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
@@ -62,19 +63,25 @@
 
   @media (min-width: $desktop-width) {
     min-width: 260px;
-    padding-block: 17px;
+  }
+
+  &:hover {
+    border: 1px solid $base-text-color;
+  }
+
+  &:disabled {
+    border-color: $price-shadow;
+    color: $play-circle;
+    pointer-events: none;
   }
 }
 
 .faq__tab-button--current {
   background: linear-gradient(97.05deg, $bg-accent 17.6%, $play-button-gradient 95.31%);
   color: $base-text-color-light;
-  border: none;
+  border-color: transparent;
+  border-inline: none;
   pointer-events: none;
-
-  @media (min-width: $desktop-width) {
-    padding-block: 18px;
-  }
 }
 
 .faq__tabpanel-list {
@@ -174,14 +181,14 @@
 // кнопка +
 .faq__tabpanel-list button {
   background-color: inherit;
-  border: none;
   text-align: left;
   color: inherit;
   padding: 0;
   position: relative;
   order: 1;
+  border: none;
   cursor: pointer;
-  transition: all 300ms ease-in;
+  transition: all 200ms ease-in;
 
   @media (min-width: $desktop-width) {
     width: 860px;
@@ -194,22 +201,20 @@
     height: 14px;
     position: absolute;
     right: 8px;
-    top: 50%;
+    top: calc(48% + 2px);
     transform: translateY(-50%);
     mask-image: url("../../__spritemap#sprite-plus-view");
     mask-repeat: no-repeat;
     border-radius: 100%;
     background-color: $button-border;
+    transition: all 300ms ease-in;
+    z-index: 2;
 
     @media (min-width: $tablet-width) {
       width: 20px;
       height: 20px;
       right: 10px;
-      top: 49%;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: 51%;
+      top: 43px;
     }
   }
 
@@ -221,19 +226,44 @@
     border: 1px solid $button-border;
     border-radius: 100%;
     right: 0;
-    top: 50%;
+    top: calc(48% + 2px);
     transform: translateY(-50%);
+    transition: all 300ms ease-in;
 
     @media (min-width: $tablet-width) {
       width: 40px;
       height: 40px;
       right: 0;
-      top: 49%;
+      top: 43px;
     }
+  }
 
-    @media (min-width: $desktop-width) {
-      top: 51%;
-    }
+  &:focus-visible::after {
+    background-color: $faq-divider;
+  }
+
+  &:focus-visible::before {
+    background-color: $base-text-color-light;
+  }
+
+  &:hover::before {
+    background-color: $base-text-color-light;
+  }
+
+  &:hover::after {
+    background-color: $base-text-color;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &:disabled::before {
+    opacity: 0.3;
+  }
+
+  &:disabled::after {
+    opacity: 0.3;
   }
 }
 
@@ -245,20 +275,15 @@
   border-radius: 100%;
   background-color: $button-border;
   position: absolute;
-  display: block;
   right: 0;
-  top: 50%;
+  top: calc(48% + 2px);
   transform: translateY(-50%);
 
   @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
     right: 0;
-    top: 59%;
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 49%;
+    top: 43px;
   }
 }
 
@@ -269,21 +294,20 @@
   background-color: $base-text-color-light;
   mask-image: none;
   position: absolute;
-  display: block;
   right: 8px;
-  top: 50%;
+  top: calc(48% + 2px);
   transform: translateY(-50%);
   z-index: 2;
 
   @media (min-width: $tablet-width) {
     width: 20px;
-    top: 59%;
+    top: 43px;
     right: 10px;
   }
+}
 
-  @media (min-width: $desktop-width) {
-    top: 49%;
-  }
+.faq__tab-text-open + button:focus-visible::after {
+  background-color: $faq-divider;
 }
 
 .faq__tab-text-open + button > span {

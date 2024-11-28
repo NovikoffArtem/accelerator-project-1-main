@@ -17,7 +17,6 @@
 
   @media (width >= $desktop-width) {
     padding: 40px 103px;
-
     max-width: 1366px;
     margin: 0 auto;
   }
@@ -46,12 +45,31 @@
   color: $base-text-color-light;
   display: block;
   padding-block: 5px;
+  transition: all 200ms ease;
 
   @media (width >= $tablet-width) {
     font-size: 14px;
     line-height: 22px;
     padding-block: 0;
   }
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline-color: $base-text-color-light;
+    outline-offset: 8px;
+  }
+}
+
+.footer__nav-link--disabled {
+  opacity: 0.3;
 }
 
 .footer__social {
@@ -77,6 +95,7 @@
   display: block;
   background-color: $base-text-color-light;
   position: relative;
+  transition: all 200ms ease;
 
   &::after {
     content: "";
@@ -84,6 +103,40 @@
     position: absolute;
     inset: 0;
     margin: auto;
+    background-color: $dark-footer;
+  }
+
+  &:hover {
+    background-color: $faq-divider;
+  }
+
+  &:hover::after {
+    background-color: $base-text-color-light;
+  }
+
+  &:focus-visible {
+    background-color: $secondary-text-color;
+    outline-offset: 7px;
+  }
+
+  &:focus-visible::after {
+    background-color: $base-text-color-light;
+  }
+
+  &:active {
+    background-color: $base-text-color;
+  }
+
+  &:active::after {
+    background-color: $base-text-color-light;
+  }
+}
+
+.footer__social-link--disabled {
+  background-color: $social-link-disabled;
+  pointer-events: none;
+
+  &::after {
     background-color: $dark-footer;
   }
 }

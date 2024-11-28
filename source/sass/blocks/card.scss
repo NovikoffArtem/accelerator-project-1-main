@@ -1,15 +1,15 @@
 .card {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 25px;
   background-color: $bg-video;
   background-repeat: no-repeat;
   width: 260px;
   height: 300px;
   color: $base-text-color-light;
   position: relative;
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 46px 41px 25px;
 
   &::after {
     content: "";
@@ -17,39 +17,37 @@
     height: 100%;
     position: absolute;
     background-color: $base-text-color;
-    opacity: 0.8;
     inset: 0;
-    display: none;
-  }
-
-  &:focus,
-  &:hover {
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 46px 41px;
+    opacity: 0;
+    transition: opacity 400ms ease-in;
   }
 
   &:hover::after {
-    display: block;
+    opacity: 0.8;
   }
 
   &:focus::after {
-    display: block;
+    opacity: 0.8;
+  }
+
+  &:hover .card__content-wrapper {
+    height: 100%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus .card__content-wrapper {
+    height: 100%;
   }
 }
 
-.card:focus .card__subtitle,
-.card:hover .card__subtitle {
-  display: block;
+.card__content-wrapper {
+  height: 22px;
+  overflow: hidden;
   z-index: 1;
-}
-
-.card:focus .card__list,
-.card:hover .card__list,
-.card__title {
-  display: flex;
-  z-index: 1;
+  transition: all 400ms ease;
 }
 
 .card__title {
@@ -58,22 +56,30 @@
   text-align: center;
   font-weight: 400;
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .card__subtitle {
   font-size: 16px;
   line-height: 24px;
   color: $card-subcolor;
-  display: none;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 34px;
 }
 
-.card--pavlova {
-  background-image:
-    image-set(
-      url("../img/images/jury/pavlova@1x.webp") type("image/webp") 1x,
-      url("../img/images/jury/pavlova@2x.webp") type("image/webp") 2x,
-      url("../img/images/jury/pavlova@1x.jpg") type("image/jpg") 1x,
-      url("../img/images/jury/pavlova@2x.jpg") type("image/jpg") 2x);
+.card__list {
+  flex-direction: column;
+  gap: 12px;
+  font-weight: 400;
+  padding-left: 20px;
+  display: flex;
+}
+
+.card-item {
+  list-style-type: disc;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .card--lavrov {
@@ -103,16 +109,11 @@
       url("../img/images/jury/ketova@2x.jpg") type("image/jpg") 2x);
 }
 
-.card__list {
-  flex-direction: column;
-  gap: 12px;
-  font-weight: 400;
-  padding-left: 20px;
-  display: none;
-}
-
-.card-item {
-  list-style-type: disc;
-  font-size: 14px;
-  line-height: 22px;
+.card--pavlova {
+  background-image:
+    image-set(
+      url("../img/images/jury/pavlova@1x.webp") type("image/webp") 1x,
+      url("../img/images/jury/pavlova@2x.webp") type("image/webp") 2x,
+      url("../img/images/jury/pavlova@1x.jpg") type("image/jpg") 1x,
+      url("../img/images/jury/pavlova@2x.jpg") type("image/jpg") 2x);
 }

@@ -27,8 +27,6 @@
   @media (min-width: $desktop-width) {
     padding: 60px 80px;
     grid-template-columns: repeat(2, auto);
-
-    // column-gap: 18px;
   }
 }
 
@@ -83,6 +81,11 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 38px;
   }
+}
+
+.games__button--disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .games__datetime {

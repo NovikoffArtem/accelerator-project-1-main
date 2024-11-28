@@ -18,23 +18,43 @@
     border-image-slice: 1;
     position: absolute;
     inset: 0;
-    display: none;
+    opacity: 0;
+    transition: opacity 200ms ease;
   }
 
   &:hover::after {
-    display: block;
+    opacity: 1;
   }
 
   &:hover .price-card__button {
     background: linear-gradient(97.05deg, $features-grad-1 17.6%, $border-gradient 95.31%);
-    border: none;
+    border-color: transparent;
+    border-left: none;
+    border-right: none;
     color: $base-text-color-light;
-    padding-block: 27px;
-    cursor: pointer;
   }
 
   &:has(.price-card__button:focus-visible)::after {
-    display: block;
+    opacity: 1;
+  }
+
+  &:has(.price-card__button:active) .price-card__button {
+    color: $light-oppacity-text;
+  }
+
+  &:hover .price-card__button--disabled {
+    pointer-events: none;
+    background: none;
+    color: $base-text-color;
+    border: 2px solid $base-text-color;
+  }
+
+  &:has(.price-card__button--disabled)::after {
+    opacity: 0;
+  }
+
+  &:has(.price-card__button--disabled:focus-visible)::after {
+    opacity: 0;
   }
 
   @media (min-width: $tablet-width) {
@@ -128,22 +148,32 @@
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;
-  color: $base-text-color;
-  border: 2px solid $base-text-color;
   width: 100%;
-  padding: 25px 10px;
   z-index: 2;
-  cursor: pointer;
+  display: inline;
+  transition: all 200ms ease;
 
   @media (min-width: $tablet-width) {
     padding: 25px;
   }
 
   &:focus-visible {
-    outline: none;
-    background: linear-gradient(97.05deg, $bg-accent 17.6%, $play-button-gradient 95.31%);
-    border: none;
+    background: linear-gradient(97.05deg, $price-hover-oppacity-1 17.6%, $price-hover-oppacity-2 95.31%);
+    border-color: transparent;
+    border-left: none;
+    border-right: none;
     color: $base-text-color-light;
-    padding-block: 27px;
+  }
+}
+
+.price-card__button--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+
+  &:focus-visible {
+    border: 2px solid $base-text-color;
+    outline: none;
+    background: none;
+    color: $base-text-color;
   }
 }

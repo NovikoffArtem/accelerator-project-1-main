@@ -51,9 +51,9 @@
   gap: 28px;
   padding: 30px;
   padding-bottom: 36px;
-
   color: $base-text-color-light;
   text-align: center;
+
 
   @media (min-width: $tablet-width) {
     padding: 40px 25px;
@@ -115,10 +115,40 @@
   color: $base-text-color-light;
   text-transform: uppercase;
   text-underline-offset: 8px;
+  align-self: center;
+  width: 70px;
+  transition: all 200ms ease;
+
+  @media (min-width: $tablet-width) {
+    align-self: start;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline-offset: 10px;
+    text-decoration: none;
+    outline-color: $base-text-color-light;
+  }
 }
 
 .offers__link--dark {
   color: $base-text-color;
+
+  &:focus-visible {
+    outline-color: $base-text-color;
+  }
+}
+
+.offers__link--disabled {
+  pointer-events: none;
+  opacity: 0.3;
 }
 
 .offers__image {

@@ -56,13 +56,12 @@
   font-weight: 400;
   width: 100%;
   background-color: transparent;
-
   border: none;
   padding-block: 5px;
   padding-left: 0;
-
   border-bottom: 1px solid $faq-divider;
   color: $base-text-color-light;
+  transition: all 200ms ease;
 
   @media (min-width: $tablet-width) {
     padding-block: 6px;
@@ -75,12 +74,17 @@
   }
 
   &:focus-visible {
-    outline: none;
-    border: 1px solid $base-text-color-light;
+    outline-color: $base-text-color-light;
+    outline-offset: 4px;
+    border: none;
   }
 
   &:hover {
     border-color: $base-text-color-light;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 

@@ -35,6 +35,7 @@
   font-size: 22px;
   line-height: 22px;
   font-weight: 700;
+  transition: all 200ms ease-in;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -45,4 +46,25 @@
     font-size: 26px;
     line-height: 26px;
   }
+
+  &:hover {
+    color: $header-link;
+  }
+
+  &:focus-visible {
+    color: $button-border;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    color: $base-text-color;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+}
+
+.header__link--disabled {
+  pointer-events: none;
+  color: $bg-primary;
+  opacity: 0.5;
 }

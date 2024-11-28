@@ -7,13 +7,36 @@
   padding: 22px;
   text-transform: uppercase;
   text-decoration: none;
-
   margin: 0;
+  cursor: pointer;
 }
 
 .button--primary {
   border: 2px solid $base-text-color-light;
   color: $base-text-color-light;
   background-color: transparent;
+  transition: all 200ms ease-in;
+
+  &:hover {
+    background-color: $base-text-color-light;
+    color: $secondary-text-color;
+    font-weight: 700;
+  }
+
+  &:focus-visible {
+    background-color: $light-oppacity;
+    color: $secondary-text-color;
+    font-weight: 700;
+  }
+
+  &:active {
+    background-color: $base-text-color-light;
+    color: $base-text-color;
+  }
 }
 
+.button--secondary {
+  border: 2px solid $base-text-color;
+  color: $base-text-color;
+  padding: 25px;
+}
