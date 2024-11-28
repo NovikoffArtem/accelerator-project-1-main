@@ -82,38 +82,11 @@
   line-height: 22px;
 }
 
-.card--lavrov {
-  background-image:
-    image-set(
-      url("../img/images/jury/lavrov@1x.webp") type("image/webp") 1x,
-      url("../img/images/jury/lavrov@2x.webp") type("image/webp") 2x,
-      url("../img/images/jury/lavrov@1x.jpg") type("image/jpg") 1x,
-      url("../img/images/jury/lavrov@2x.jpg") type("image/jpg") 2x);
-}
-
-.card--pashkov {
-  background-image:
-    image-set(
-      url("../img/images/jury/pashkov@1x.webp") type("image/webp") 1x,
-      url("../img/images/jury/pashkov@2x.webp") type("image/webp") 2x,
-      url("../img/images/jury/pashkov@1x.jpg") type("image/jpg") 1x,
-      url("../img/images/jury/pashkov@2x.jpg") type("image/jpg") 2x);
-}
-
-.card--ketova {
-  background-image:
-    image-set(
-      url("../img/images/jury/ketova@1x.webp") type("image/webp") 1x,
-      url("../img/images/jury/ketova@2x.webp") type("image/webp") 2x,
-      url("../img/images/jury/ketova@1x.jpg") type("image/jpg") 1x,
-      url("../img/images/jury/ketova@2x.jpg") type("image/jpg") 2x);
-}
-
-.card--pavlova {
-  background-image:
-    image-set(
-      url("../img/images/jury/pavlova@1x.webp") type("image/webp") 1x,
-      url("../img/images/jury/pavlova@2x.webp") type("image/webp") 2x,
-      url("../img/images/jury/pavlova@1x.jpg") type("image/jpg") 1x,
-      url("../img/images/jury/pavlova@2x.jpg") type("image/jpg") 2x);
+.card__image {
+  display: block;
+  width: 260px;
+  height: 300px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
 }

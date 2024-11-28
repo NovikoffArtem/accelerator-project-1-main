@@ -99,9 +99,7 @@
             </li>
           </ul>
         </div>
-
       </div>
-
     </section>
     <section class="games content-wrapper" data-test="games">
       <div class="games__wrapper">
@@ -126,7 +124,7 @@
           <source type="image/webp" srcset="img/images/games/games-bg-mobile@1x.webp 1x, img/images/games/games-bg-mobile@2x.webp 2x" width="290" height="290">
           <source media="(min-width: 1366px)" type="image/jpg" srcset="img/images/games/games-bg-desktop@1x.jpg 1x, img/images/games/games-bg-desktop@2x.jpg 2x" width="660" height="500">
           <source media="(min-width: 500px)" type="image/jpg" srcset="img/images/games/games-bg-tablet@1x.jpg 1x, img/images/games/games-bg-tablet@2x.jpg 2x" width="378" height="348">
-          <img class="games__image" src="img/images/games/games-bg-mobile" srcset="img/images/games/games-bg-mobile@2x.jpg 2x" width="290" height="290" alt="Мужчина занимается спортом" loading="lazy">
+          <img class="games__image" src="img/images/games/games-bg-mobile@1x.jpg" srcset="img/images/games/games-bg-mobile@2x.jpg 2x" width="290" height="290" alt="Мужчина занимается спортом" loading="lazy">
         </picture>
       </div>
     </section>
@@ -134,12 +132,16 @@
 
       <div class="content-wrapper jury__wrapper">
         <h2 class="jury__title section-title">Жюри</h2>
-        <button class="swiper-button swiper-button-prev"></button>
-        <button class="swiper-button swiper-button-next"></button>
+        <button class="swiper-button swiper-button-prev" aria-label="Предыдущий слайд"></button>
+        <button class="swiper-button swiper-button-next" aria-label="Следующий слайд"></button>
         <div class="jury__swiper swiper">
           <ul class="jury__list swiper-wrapper">
 
-            <li class="card card--pavlova swiper-slide" tabindex="0">
+            <li class="swiper-slide card" tabindex="0">
+              <picture>
+                <source srcset="img/images/jury/pavlova@1x.webp 1x, img/images/jury/pavlova@2x.webp 2x" width="260" height="300">
+                <img class="card__image" src="img/images/jury/pavlova@1x.jpg" srcset="img/images/jury/pavlova@2x.jpg 2x" alt="Фотография Анны Павловой" width="260" height="300">
+              </picture>
               <div class="card__content-wrapper">
                 <h3 class="card__title">Анна Павлова</h3>
                 <p class="card__subtitle">CrossFit</p>
@@ -151,7 +153,11 @@
               </div>
             </li>
 
-            <li class="card card--lavrov swiper-slide" tabindex="0">
+            <li class="swiper-slide card" tabindex="0">
+              <picture>
+                <source srcset="img/images/jury/lavrov@1x.webp 1x, img/images/jury/lavrov@2x.webp 2x" width="260" height="300">
+                <img class="card__image" src="img/images/jury/lavrov@1x.jpg" srcset="img/images/jury/lavrov@2x.jpg 2x" alt="Фотография Алексея Лаврова" width="260" height="300">
+              </picture>
               <div class="card__content-wrapper">
                 <h3 class="card__title">Алексей Лавров</h3>
                 <p class="card__subtitle">CrossFit</p>
@@ -163,7 +169,11 @@
               </div>
             </li>
 
-            <li class="swiper-slide card card--pashkov" tabindex="0">
+            <li class="swiper-slide card" tabindex="0">
+              <picture>
+                <source srcset="img/images/jury/pashkov@1x.webp 1x, img/images/jury/pashkov@2x.webp 2x" width="260" height="300">
+                <img class="card__image" src="img/images/jury/pashkov@1x.jpg" srcset="img/images/jury/pashkov@2x.jpg 2x" alt="Фотография Александра Пашкова" width="260" height="300">
+              </picture>
               <div class="card__content-wrapper">
                 <h3 class="card__title">Александр Пашков</h3>
                 <p class="card__subtitle">CrossFit</p>
@@ -175,7 +185,11 @@
               </div>
             </li>
 
-            <li class="swiper-slide card card--ketova" tabindex="0">
+            <li class="swiper-slide card" tabindex="0">
+              <picture>
+                <source srcset="img/images/jury/ketova@1x.webp 1x, img/images/jury/ketova@2x.webp 2x" width="260" height="300">
+                <img class="card__image" src="img/images/jury/ketova@1x.jpg" srcset="img/images/jury/ketova@2x.jpg 2x" alt="Фотография Марии Кетовой" width="260" height="300">
+              </picture>
               <div class="card__content-wrapper">
                 <h3 class="card__title">Мария Кетова</h3>
                 <p class="card__subtitle">CrossFit</p>
@@ -187,7 +201,27 @@
               </div>
             </li>
 
-            <li class="swiper-slide card card--pavlova">
+            <li class="swiper-slide card">
+              <picture>
+                <source srcset="img/images/jury/lavrov@1x.webp 1x, img/images/jury/lavrov@2x.webp 2x" width="260" height="300">
+                <img class="card__image" src="img/images/jury/lavrov@1x.jpg" srcset="img/images/jury/lavrov@2x.jpg 2x" alt="Фотография Алексея Лаврова" width="260" height="300">
+              </picture>
+              <div class="card__content-wrapper">
+                <h3 class="card__title">Алексей Лавров</h3>
+                <p class="card__subtitle">CrossFit</p>
+                <ul class="card__list">
+                  <li class="card-item">Certified Level 3 Trainer</li>
+                  <li class="card-item">Победитель чемпионата России по CrossFit</li>
+                  <li class="card-item">Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="swiper-slide card">
+              <picture>
+                <source srcset="img/images/jury/pavlova@1x.webp 1x, img/images/jury/pavlova@2x.webp 2x" width="260" height="300">
+                <img class="card__image" src="img/images/jury/pavlova@1x.jpg" srcset="img/images/jury/pavlova@2x.jpg 2x" alt="Фотография Анны Павловой" width="260" height="300">
+              </picture>
               <div class="card__content-wrapper">
                 <h3 class="card__title">Анна Павлова</h3>
                 <p class="card__subtitle">CrossFit</p>
@@ -199,7 +233,11 @@
               </div>
             </li>
 
-            <li class="swiper-slide card card--pashkov">
+            <li class="swiper-slide card">
+              <picture>
+                <source srcset="img/images/jury/pashkov@1x.webp 1x, img/images/jury/pashkov@2x.webp 2x" width="260" height="300">
+                <img class="card__image" src="img/images/jury/pashkov@1x.jpg" srcset="img/images/jury/pashkov@2x.jpg 2x" alt="Фотография Александра Пашкова" width="260" height="300">
+              </picture>
               <div class="card__content-wrapper">
                 <h3 class="card__title">Александр Пашков</h3>
                 <p class="card__subtitle">CrossFit</p>
@@ -211,19 +249,11 @@
               </div>
             </li>
 
-            <li class="swiper-slide card card--pashkov">
-              <div class="card__content-wrapper">
-                <h3 class="card__title">Александр Пашков</h3>
-                <p class="card__subtitle">CrossFit</p>
-                <ul class="card__list">
-                  <li class="card-item">Certified Level 3 Trainer</li>
-                  <li class="card-item">Победитель чемпионата России по CrossFit</li>
-                  <li class="card-item">Опыт — 6 лет</li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="swiper-slide card card--ketova">
+            <li class="swiper-slide card">
+              <picture>
+                <source srcset="img/images/jury/ketova@1x.webp 1x, img/images/jury/ketova@2x.webp 2x" width="260" height="300">
+                <img class="card__image" src="img/images/jury/ketova@1x.jpg" srcset="img/images/jury/ketova@2x.jpg 2x" alt="Фотография Марии Кетовой" width="260" height="300">
+              </picture>
               <div class="card__content-wrapper">
                 <h3 class="card__title">Мария Кетова</h3>
                 <p class="card__subtitle">CrossFit</p>
@@ -419,8 +449,8 @@
       <div class="reviews__wrapper content-wrapper">
         <h2 class="reviews__title section-title">Отзывы</h2>
         <div class="reviews__swiper">
-          <button class="swiper-button swiper-button--reviews swiper-button--reviews-prev"></button>
-          <button class="swiper-button swiper-button--reviews swiper-button--reviews-next"></button>
+          <button class="swiper-button swiper-button--reviews swiper-button--reviews-prev" aria-label="Предыдущий отзыв"></button>
+          <button class="swiper-button swiper-button--reviews swiper-button--reviews-next" aria-label="Следующий отзыв"></button>
           <ul class="reviews__list swiper-wrapper">
             <li class="swiper-slide">
               <img src="img/images/reviews/orlova@1x.webp" alt=" аватар пользователя Анна Орлова" width="110" height="150" loading="lazy">
